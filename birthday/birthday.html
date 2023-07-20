@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Comparison</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body onload="compareDates()">
+    <h1>Date Comparison</h1>
+    <div id="output"></div>
+
+
+<script type="text/javascript">
+    
+
+function compareDates() {
+    // Load the Excel file
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'main.xlsx', true);
+    xhr.responseType = 'arraybuffer';
+
+console.log("Loaded");
+    xhr.onload = function (e) {
+        var arraybuffer = xhr.response;
+        var data = new Uint8Array(arraybuffer);
+        var workbook = XLSX.read(data, { type: 'array' });
+
+
+
+console.log("Loaded 123");
+        // Get the first worksheet
+        var worksheet = workbook.Sheets[workbook.SheetNames[0]];
+
+        // Get today's date
+        var today = new Date();
+
+        // Get the range of dates from the worksheet
+        var range = XLSX.utils.decode_range(worksheet['!ref']);
+        var dates = [];
+
+
+console.log("Loaded 345");
+        for (var R = range.s.r; R <= range.e.r; ++R) {
+            var cell = worksheet[XLSX.utils.encode_cell({ r: R, c: 0 })];
+            if (cell && cell.t === 'd') {
+                var date = XLSX.SSF.parse_date_code(cell.v);
+
+console.log("Loaded 567");
+                dates.push(date);
+            }
+        }
+
+        // Compare today's date with the dates from the Excel file
+        var matchingNames = [];
+        for (var i = 0; i < dates.length; i++) {
+            if (dates[i].getFullYear() === today.getFullYear() &&
+                dates[i].getMonth() === today.getMonth() &&
+                dates[i].getDate() === today.getDate()) {
+                var nameCell = worksheet[XLSX.utils.encode_cell({ r: i, c: 1 })];
+                if (nameCell && nameCell.t === 's') {
+
+console.log("Loaded 678");
+                    matchingNames.push(nameCell.v);
+                }
+            }
+        }
+
+        // Display the matching names on the page
+        var output = document.getElementById('output');
+        if (matchingNames.length > 0) {
+            var namesText = "Names found for today's date:<br>";
+            
+console.log(namesText);
+            namesText += matchingNames.join('<br>');
+            output.innerHTML = namesText;
+        } else {
+            output.innerHTML = "No names found for today's date.";
+        }
+    };
+
+    xhr.send();
+}
+
+
+
+</script>
+
+</body>
+
+
+
+
+
+
+
+</html>
