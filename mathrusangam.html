@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sacred Heart Church-Bhayander<</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style1.css" rel="stylesheet">
+ -->
+
+        <style>
+
+/*
+.flip-card {
+  background-color: transparent;
+  width: 330px;
+  height: 480px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: blue;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: darkred;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+*/
+
+   ul li {
+            list-style: square;
+
+        }
+  
+        ul li::marker {
+            animation-name: GFG;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+  
+        ul li:nth-child(1)::marker {
+            animation-delay: 0;
+        }
+  
+        ul li:nth-child(2)::marker {
+            animation-delay: 0.5s;
+        }
+  
+        ul li:nth-child(3)::marker {
+            animation-delay: 1.0s;
+        }
+  
+        ul li:nth-child(4)::marker {
+            animation-delay: 1.5s;
+        }
+  
+        ul li:nth-child(5)::marker {
+            animation-delay: 2.0s;
+        }
+            
+         ul li:nth-child(6)::marker {
+            animation-delay: 2.5s;
+        }
+        ul li:nth-child(7)::marker {
+            animation-delay: 3.0s;
+        }
+        ul li:nth-child(8)::marker {
+            animation-delay: 3.5s;
+        }
+        ul li:nth-child(9)::marker {
+            animation-delay: 4.0s;
+        }
+        ul li:nth-child(10)::marker {
+            animation-delay: 4.5s;
+        }
+        ul li:nth-child(11)::marker {
+            animation-delay: 5.0s;
+        }
+        ul li:nth-child(12)::marker {
+            animation-delay: 5.5s;
+        }
+        ul li:nth-child(13)::marker {
+            animation-delay: 6.0s;
+        }
+        ul li:nth-child(14)::marker {
+            animation-delay: 6.5s;
+        }
+
+        ul li:nth-child(15)::marker {
+            animation-delay: 7.0s;
+        }
+        ul li:nth-child(16)::marker {
+            animation-delay: 7.5s;
+        }
+        ul li:nth-child(17)::marker {
+            animation-delay: 8.0s;
+        }
+        ul li:nth-child(18)::marker {
+            animation-delay: 8.5s;
+        }
+        ul li:nth-child(19)::marker {
+            animation-delay: 9.0s;
+        }
+
+            ul li:nth-child(20)::marker {
+            animation-delay: 9.5s;
+        }
+        @keyframes GFG {
+            from {
+                font-size: 12px;
+            }
+  
+            to {
+                font-size: 30px;
+                color: green;
+            }
+        }
+
+
+/**timeline3*/
+
+
+/******************* Timeline Demo - 5 *****************/
+
+.main-timeline3 {
+    overflow: hidden;
+    position: relative
+}
+
+.main-timeline3 .timeline {
+    position: relative;
+    margin-top: -79px
+}
+
+.main-timeline3 .timeline:first-child {
+    margin-top: 0
+}
+
+.main-timeline3 .timeline-icon,
+.main-timeline3 .year {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.main-timeline3 .timeline:after,
+.main-timeline3 .timeline:before {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both
+}
+
+.main-timeline3 .timeline:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2
+}
+
+.main-timeline3 .timeline-icon {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 25px solid transparent;
+    border-top-color: #f44556;
+    border-right-color: #f44556;
+    z-index: 1;
+    transform: rotate(45deg)
+}
+
+.main-timeline3 .year {
+    display: block;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    font-size: 30px;
+    font-weight: 700;
+    color: #f44556;
+    text-align: center;
+    transform: rotate(-45deg)
+}
+
+.main-timeline3 .timeline-content {
+    width: 35%;
+    float: right;
+    background: #f44556;
+    padding: 30px 20px;
+    margin: 50px 0;
+    box-shadow: 0 10px 25px -10px rgba(72, 29, 99, .3);
+    z-index: 1;
+    position: relative
+}
+
+.main-timeline3 .timeline-content:before {
+    content: "";
+    width: 20%;
+    height: 15px;
+    background: #f44556;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    z-index: -1;
+    transform: translateY(-50%)
+}
+
+.main-timeline3 .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 10px
+}
+
+.main-timeline3 .description {
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    margin: 0
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-icon {
+    transform: rotate(-135deg);
+    border-top-color: #e97e2e;
+    border-right-color: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(2n) .year {
+    transform: rotate(135deg);
+    color: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content {
+    float: left
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+    left: auto;
+    right: -20%
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content,
+.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+    background: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(3n) .timeline-icon {
+    border-top-color: #13afae;
+    border-right-color: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(3n) .year {
+    color: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(3n) .timeline-content,
+.main-timeline3 .timeline:nth-child(3n) .timeline-content:before {
+    background: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(4n) .timeline-icon {
+    border-top-color: #105572;
+    border-right-color: #105572
+}
+
+.main-timeline3 .timeline:nth-child(4n) .year {
+    color: #105572
+}
+
+.main-timeline3 .timeline:nth-child(4n) .timeline-content,
+.main-timeline3 .timeline:nth-child(4n) .timeline-content:before {
+    background: #105572
+}
+
+@media only screen and (max-width:1199px) {
+    .main-timeline3 .timeline {
+        margin-top: -103px
+    }
+    .main-timeline3 .timeline-content:before {
+        left: -18%
+    }
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        right: -18%
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .main-timeline3 .timeline {
+        margin-top: -127px
+    }
+    .main-timeline3 .timeline-content:before {
+        left: -2%
+    }
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        right: -2%
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .main-timeline3 .timeline {
+        margin-top: 0;
+        overflow: hidden
+    }
+    .main-timeline3 .timeline:before,
+    .main-timeline3 .timeline:nth-child(2n):before {
+        box-shadow: none
+    }
+    .main-timeline3 .timeline-icon,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-icon {
+        margin-top: -30px;
+        margin-bottom: 20px;
+        position: relative;
+        transform: rotate(135deg)
+    }
+    .main-timeline3 .timeline:nth-child(2n) .year,
+    .main-timeline3 .year {
+        transform: rotate(-135deg)
+    }
+    .main-timeline3 .timeline-content,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content {
+        width: 100%;
+        float: none;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        padding: 25px 20px;
+        margin: 0 auto
+    }
+    .main-timeline3 .timeline-content:before,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        width: 15px;
+        height: 25px;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, 0)
+    }
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+        <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="display-4 m-0 title" style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; " src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="events.html" class="nav-item nav-link">Events</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Departments</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="parish.html" class="dropdown-item">Parish Council</a>
+                        <a href="units.html" class="dropdown-item">Units</a>
+                        <a href="catechism.html" class="dropdown-item">Catechism</a>
+                        
+                    </div>
+                </div>
+               <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Associations</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="pithruvedhi.html" class="dropdown-item">Pithruvedi</a>
+                        <a href="mathrusangam.html" class="dropdown-item">Mathrusangam</a>
+                        <a href="youth.html" class="dropdown-item">Youth</a>
+                        <a href="choir.html" class="dropdown-item">Choir</a>
+                        <a href="alter.html" class="dropdown-item ">Alter Angels</a>
+                        <a href="alter.html" class="dropdown-item">Karunya Trust</a>
+                        <a href="alter.html" class="dropdown-item">Prayer Group</a>
+                        <a href="alter.html" class="dropdown-item">JNF</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="contact.html" class="dropdown-item">Contact Us</a>
+                        <a href="404.html" target="_blank" class="dropdown-item">Directory</a>
+                        <a href="404.html" class="dropdown-item">Payment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/profile.php?id=100082052049136&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.youtube.com/channel/UCe4v70ixUEkQecglePl4Zpg"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://instagram.com/sacred_heart_catholic_church?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+            </div>
+            
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+   
+  <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/nirakuttu3.jpg" alt="Image">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/nirakuttu2.jpg" alt="Image">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/nirakuttu1.jpg" alt="Image">
+                    
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+<!-- Main Feature start -->
+
+ <div class="container-xxl py-5">
+        <div style="text-align: justify;" class="container">
+            <img src="img/math_logo.jpg" alt="Snow" style="height: 120px; width: 140px; float: left; margin-right: 40px;">
+              <h1  style="padding-top:40px;" class="display-6 mb-5"> Mathrusangam</h1>
+             
+             <br>
+             <br>
+            <div class="row g-5">
+                
+<span>
+    
+    Under the strong and dynamic leadership of Rev. Fr. Binoy Binoy Kannanikal, Mother Superior Vimal Maria, our mathrusangam is working very effectively. We have 180 members. Few main activities are listed below:
+<br>
+
+<br>
+
+<h5>LITURGICAL</h5>
+
+
+
+Mathrusangam members are leading rosary everyday before Holy Mass. Mathrusangam with the support of prayer group initiated an online grocery for 24 hours x 31 days in the month of October and dedicated rosary everyday. Mathrusangam had conducted special prayers to fight against corona. They have recited around 9500 rosaries (- highest count from our Forane) for the intention of Covid affected people which was conducted by the International Syro Malabar Community. Mathrusangam had also actively participated in prayer marathon conducted by Diocese of Kalyan mathrusangam.
+<br>
+In the Month of December, all members recited ejaculatory prayers to welcome Infant Jesus in our hearts. To get enriched by Word of God we are uploading Bible - one chapter everyday in our WhatsApp group, with it's explanation which helps to understand more on Word of God. Conducted "Parihaara Yatra" for Nashik and visited 7 churches in this Lenten Season. Also took the responsibilities of liturgical assistances and church cleaning in special occasions.
+
+<br>
+<br><br>
+<h5>SOCIAL ACTIVITIES & CHARITY:</h5>
+
+In October Mathrusangam had collected groceries everyday from church members to help poor and the needy and received cash of Rs. 40,000. We have handed it over to Santwanagram, (orphanage) Kalyan. Mathrudinam had collected clothes from church members and gave to Kalyan mathrusangam to help poor and the needy. Mathrudinam was celebrated on 8th September with Solemn Mass followed by a seminar on 12th September. The subject was "mental stress of current situation and health issues of women". Faculty (online) : Sr. Dr. Jisha - was the guest speaker. After the session, online cultural program were there and all the members enjoyed it. Also to motivate mothers talents they had conducted Solo singing competition at Mathrudinam day. Women's day was celebrated and conducted an exhibition on Famous women Personalities, done by our different units of Parish. It gave insight / inspiration to all the members.
+
+
+<br>
+<br><br>
+<h5> ENTERTAINMENT:</h5>
+
+To relieve the daily pressure of mothers a movie was projected were all the mothers were able to relax and spend time with other mothers to which there was a great participation and they had fun. enjoyed well.
+<br>
+<br><br>
+<h5>SKILL DEVELOPMENT:</h5>
+
+To develop the skill of rosary making among the parish Bhayander Mathrusangam had hosted a Rosary making workshop. A lot of the church members participated and learnt to make rosary.
+
+
+</span>
+  
+
+
+
+</div>
+</div>
+</div>
+<div class="think">  
+                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Our Journey</h1>
+       </div>
+
+
+
+
+<div class="container">
+<h3 class="card-title"></h3>
+<div class="row">
+<div class="col-md-12">
+<div class="main-timeline3">
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2018</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Desginer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2017</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Developer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2016</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Desginer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2015</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Developer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+                     <div style="padding-top: -15%;" class="container-xxl py-5">
+                            <div class="container">
+                               
+                    <div class="think">  
+                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Our Committee</h1>
+       </div>
+<br>
+<br>
+
+<img style ="width:73% ; height: 60%; float: right; padding-left: 15%; margin-top: 40px;" class="img-fluid me-3" src="img/math_com.jpg" alt="" >
+          
+          <div style="padding-top: 25%; margin-left: 670px;">
+        <span><h5>Mathrusangam Committee for the year 2023-2025</h5></span>
+    </div>              
+
+    </div>  
+<div style="margin-top: -460px; margin-left:20px;">
+
+
+
+
+
+
+
+         <ul>
+
+<br>
+                    <li>Mother Superior </li> 
+                    <li>Mrs. Shiji Mathew (President)</li>
+                    <li>Mrs. Jessy Joseph (Vice-President)</li>
+                    <li>Mrs. Asha Cyril (Secretary)</li>
+                    <li>Mrs. Anu Tomy (Joint-Secretary)</li>
+                    <li>Mrs. Mercy Thomas (Treasurer)</li>
+                    <li>Mrs. Shelly Varghese</li>
+                    <li>Mrs. Reni Sibi</li>
+                    <li>Mrs. Sinda Leo</li>
+                    <li>Mrs. Joycy Johnson</li>
+                    <li>Mrs. Catherine Lonappan</li>
+                    <li>Mrs. Sally Jacob</li>
+                    <li>Mrs. Jossy Varghese</li>
+                    <li>Mrs. Leena Alex</li>
+                    
+                </ul>  
+  
+
+  
+                            </div>
+                        </div>
+
+                            
+   
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h1 class="text-white mb-4"><img style ="max-height:75px; margin-bottom:-5px ; padding-top:-3px ;" class="img-fluid me-3" src="img/icon/jesus.png" alt="">Sacred Heart Church</h1>
+                    <span>He said, “They trust in weapons and acts of daring, but we trust in almighty God, who can by a mere nod destroy not only those who attack us but even the whole world.” </br><i>- (2 Maccabees 8:18)</i>
+                        </span>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-light mb-4">Find Us!</h5>
+                   <div class="position-relative">
+                    <iframe  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.6041644143006!2d72.85274261482539!3d19.299572586960107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0325bf64f37%3A0xd9a2aa73f659902f!2sSacred%20Heart%20Catholic%20Church%2C%20Bhayander!5e0!3m2!1sen!2sin!4v1679312063852!5m2!1sen!2sin" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-light mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Fatak Rd, Bhayandar, Vikas Industrial Estate, Bhayandar East,Thane- 401105</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>022-2819 2096</p>
+                    <p><i class="fa fa-envelope me-3"></i>sacredheartchurchbhayandar@gmail.com | </br>&emsp;&emsp;parishpriest@sacredheartchurchbhayandar.org</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Follow Us</h5>
+                    <div class="d-flex">
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=100082052049136&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.youtube.com/channel/UCe4v70ixUEkQecglePl4Zpg"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://instagram.com/sacred_heart_catholic_church?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Sacred Heart Church</a>, All Right Reserved.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

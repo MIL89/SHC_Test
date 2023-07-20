@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sacred Heart Church-Bhayander<</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+    table {
+            border: 1px solid black;
+      
+            width: 40%;
+
+            margin-left: 95px; 
+            
+        
+        margin-top: -580px;
+          text-align: center;
+          color: black;
+        }
+          
+    th, td {
+            border: 1px solid black;
+            padding: 5px;
+            color: black;
+        }
+          
+        tr:nth-child(odd) {
+            background-color: #c89eab;
+        }
+* {
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+.container_i {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+
+   .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.responsive-para{
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+    text-align: center;
+}
+
+    }
+.columner {
+  float: left;
+  width: 23.33%;
+ margin-left: 1%;
+  
+}
+
+/* Clearfix (clear floats) */
+.rower::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.timeline {
+    position: relative;
+    padding:4px 0 0 0;
+    margin-top:22px;
+    list-style: none;
+}
+
+.timeline>li:nth-child(even) {
+    position: relative;
+    margin-bottom: 50px;
+    height: 180px;
+    right:-90px;
+}
+
+.timeline>li:nth-child(odd) {
+    position: relative;
+    margin-bottom: 50px;
+    height: 180px;
+    left:-110px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+    min-height: 170px;
+}
+
+.timeline > li .timeline-panel {
+  position: relative;
+  float: left;
+  width: 41%;
+  padding: 0 90px 20px 30px;
+  text-align: right;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    border: 7px solid #F28C28;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px #4582ec;
+    width: 100px;
+    height: 100px;
+    margin-left: -100px;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 30px 20px 10px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+  margin-top:22px;
+    margin-bottom: 4px;
+    padding:0;
+    color: #b3b3b3;
+}
+
+.timeline .timeline-heading h4.subheading {
+  margin:0;
+  padding:0;
+    text-transform: none;
+    font-size:18px;
+    color:#333333;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+    color:#808080;
+}
+/*Style for even div.line*/
+.timeline>li:nth-child(odd) .line:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 690px;
+    width: 4px;
+    height:310px;
+    background-color: #F28C28;
+    -ms-transform: rotate(-44deg); /* IE 9 */
+    -webkit-transform: rotate(-44deg); /* Safari */
+    transform: rotate(-44deg);
+    box-shadow: 0 0 5px #F28C28;
+}
+/*Style for odd div.line*/
+.timeline>li:nth-child(even) .line:before  {
+    content: "";
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 450px;
+    width: 4px;
+    height:340px;
+    background-color: #F28C28;
+    -ms-transform: rotate(44deg); /* IE 9 */
+    -webkit-transform: rotate(44deg); /* Safari */
+    transform: rotate(44deg);
+    box-shadow: 0 0 5px #F28C28;
+}
+/* Medium Devices, .visible-md-* */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0px;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    left: 690px;
+    margin-left: 0px;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 76%;
+    padding: 0 0 20px 0px;
+    text-align: left;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: right;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+/* Small Devices, Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0px;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    left: 520px;
+    margin-left: 0px;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: left;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: right;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 767px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li .timeline-image {
+    position: static;
+    width: 150px;
+    height: 150px;
+    margin-bottom:0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    float:right;
+    left: 0px;
+    margin-left:0;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 100%;
+    padding: 0 0 20px 14px;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 100%;
+    padding: 0 14px 20px 0px;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+ <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="m-0 " style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px;" src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="events.html" class="nav-item nav-link">Events</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Departments</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="parish.html" class="dropdown-item">Parish Council</a>
+                        <a href="units.html" class="dropdown-item">Units</a>
+                        <a href="catechism.html" class="dropdown-item">Catechism</a>
+                        <a href="forane.html" class="dropdown-item">Forane</a>
+                    </div>
+                </div>
+               <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Associations</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="pithruvedhi.html" class="dropdown-item">Pithruvedi</a>
+                        <a href="mathrusangam.html" class="dropdown-item">Mathrusangam</a>
+                        <a href="youth.html" class="dropdown-item">Youth</a>
+                        <a href="choir.html" class="dropdown-item">Choir</a>
+                        <a href="alter.html" class="dropdown-item">Alter Angels</a>
+                    </div>
+                </div>
+        
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/profile.php?id=100082052049136&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.youtube.com/channel/UCe4v70ixUEkQecglePl4Zpg"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://instagram.com/sacred_heart_catholic_church?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Our Team</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">JNF</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">Young Couple</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="text-center mx-auto wow fadeInUp"  data-wow-delay="0.5s" >
+                <p style="text-align: justify;">An organization which was formed with the aim of providing opportunities for newly married couples to actively participate in activities conducted by the Church. This initiative recognizes the importance of nurturing and involving couples in the life of the Church as they embark on their journey of married life. The organization consists of approximately 40 members who share a common desire to deepen their spiritual connection as a couple and contribute to the community.</p>
+                    <br>
+                  
+
+          <p style="text-align: justify;">     By joining this organization, newly married couples have the chance to engage in various activities and events organized by the Church. These activities may include retreats, workshops, marriage enrichment programs, social gatherings, and volunteer opportunities. Through their participation, couples can strengthen their bond, seek guidance and support from experienced couples, and build lasting friendships within the Church community.
+The organization serves as a platform for couples to share their experiences, challenges, and joys with others who are in a similar life stage. It creates a supportive environment where couples can seek advice, learn from one another, and grow together in faith. Additionally, being part of this group allows couples to contribute their talents and skills to the Church, serving as active members in various ministries and outreach initiatives.
+          </p>
+                <br>
+               
+<p style="text-align: justify;">
+                Overall, this organization plays a crucial role in fostering a sense of belonging and involvement for newly married couples within the Church. It provides a space for them to deepen their spiritual connection, build strong relationships, and actively contribute to the growth and well-being of the Church community.
+                </p>
+                </div>
+                                
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
+                <h1 class=" text-center  display-6 mb-5">Events </h1>
+            </div>
+            <div class="row g-4 justify-content-center" style="margin-bottom: 15px;">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/oppam.jpg" alt="">
+                        
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;"> celebrating togetherness, a young couples meet with th blessings of Rev.Fr Binoy With special Holy mass, offertory by young couples , wedding vows later a beautifully setup for get-together with games, interactions, knowledge sharing and concluded by dinner
+</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0"> Oppam </a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/JNF_Event2.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">The BD Mastermind Quiz was conducted by the Infusion Nurses Society where as Ms. Pushpa Charles and Ms. Johncy Charles emerged as winners at the regional level, representing their respective parishes and showcasing their exceptional knowledge and skills.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0">BD Mastermind Quiz</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/bishh.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">Solemn Holy communion was received by 5 children while Bishop of Kalyan Diocese Mar Thomas Elavanal. Further, SHC family  also celebrated Bishops 26th Episcopal Ordination and felicitated silver jubilarian couples and catechism students.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CokiABJPWlv/?igshid=MDJmNzVkMjY=">Holy Communion</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+
+ -->
+               
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
+                <h1 class=" text-center  display-6 mb-5">History </h1>
+            </div>
+            
+
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      
+      
+      <ul class="timeline">
+        <li>
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="img/icon/hist.png" style="height: 100px;width: 100px; border-radius: 50%;margin-left: -5px ;margin-top: -5px ;" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>March 2022</h4>
+             
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Rev Fr. Binoy introduced a new group named young couples for the couples who have been married at most 10 years
+
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="img/icon/hist.png" style="height: 100px;width: 100px; border-radius: 50%;margin-left: -5px ;margin-top: -5px ;" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>June 2022</h4>
+              
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                All the members of young couples gathered for their first ever event named 'Oppam' in which all the members met each other and had a great experience
+              </p>
+            </div>
+          </div>
+          
+        </li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</div>
+                    </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="g-5" >
+                 <h1  style="text-align: center;" class="display-6 mb-5 text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 20px;"> Commitee 2023-2025</h1>
+               
+
+<br>
+
+<div style="margin-left:30px;">
+
+
+<img style ="width:47% ; height: 80%; float: right; padding-top: 0px;" class="img-fluid me-3" src="img/oppam.jpg" alt="" >
+
+
+    </div>
+   <div style="padding-top: 25px; margin-left: 1080px;">
+        <span><h5>Young Couples </h5></span>
+    </div> 
+
+
+                <table style="margin-top: -250px;">
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Designation</th>
+        </tr>
+          
+        <tr>
+            <td>1.</td>
+            <td>Fr. Binoy Kannanaikkal</td>
+            <td>Parish Priest</td>
+        </tr>
+        
+        <tr>
+            <td>2.</td>
+            <td>Mr. Vigil Varghese </td>
+            <td>Incharge</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Mr. Nitin</td>
+            <td>Incharge</td>
+        </tr>
+
+        
+   </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Team End -->
+        
+   
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h1 class="text-white mb-4"><img style ="max-height:75px; margin-bottom:-5px ; padding-top:-3px ;" class="img-fluid me-3" src="img/icon/jesus.png" alt="">Sacred Heart Church</h1>
+                    <span>He said, “They trust in weapons and acts of daring, but we trust in almighty God, who can by a mere nod destroy not only those who attack us but even the whole world.” </br><i>- (2 Maccabees 8:18)</i>
+                        </span>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-light mb-4">Find Us!</h5>
+                   <div class="position-relative">
+                    <iframe  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.6041644143006!2d72.85274261482539!3d19.299572586960107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0325bf64f37%3A0xd9a2aa73f659902f!2sSacred%20Heart%20Catholic%20Church%2C%20Bhayander!5e0!3m2!1sen!2sin!4v1679312063852!5m2!1sen!2sin" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-light mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Fatak Rd, Bhayandar, Vikas Industrial Estate, Bhayandar East,Thane- 401105</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>022-2819 2096</p>
+                    <p><i class="fa fa-envelope me-3"></i>sacredheartchurchbhayandar@gmail.com | </br>&emsp;&emsp;parishpriest@sacredheartchurchbhayandar.org</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Follow Us</h5>
+                    <div class="d-flex">
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=100082052049136&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://www.youtube.com/channel/UCe4v70ixUEkQecglePl4Zpg"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square rounded-circle me-1" href="https://instagram.com/sacred_heart_catholic_church?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Sacred Heart Church</a>, All Right Reserved.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

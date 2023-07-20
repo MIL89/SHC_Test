@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+      <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.labs{
+  display: inline-block;
+  width: 100px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.modal{
+  margin-top: 10%;
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+</style>
+</head>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+
+<div class="col-md-12">
+<div class="grid search">
+<div class="grid-body">
+<div class="row">
+
+
+<!-- 
+<div class="col-md-9"> -->
+<h1><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; margin-right: 25px; " src="img/icon/search.jpg" alt="">Directory</h1>
+<hr>
+
+
+
+
+<div class="padding"></div>
+<div class="row">
+
+
+
+
+<div class="table-responsive">
+
+
+
+
+<table id="myTable" class="table table-hover">
+  <thead>
+  <tr class="header">
+    
+    <th style="width:8%;">Sr No</th>
+    <th style="width:20%;">Name</th>
+    <th style="width:20%;">Unit Name</th>
+    <th style="width:20%;">Email Id</th>
+    <th style="width:10%;">Contact </th>
+  </tr>
+   </thead> 
+   <tbody id="tbody1"></tbody> 
+  <!-- <tr>
+    <td > </td>
+    <td id="data1"></td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+    
+  </tr>  -->
+<!--
+  <tr>
+    <td>Latha Francis</td>
+    <td>Little Flower Unit</td>
+    <td>Zone 4</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Frilly Francis</td>
+    <td>St thomas Unit</td>
+    <td>Zone 2</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>George</td>
+    <td>St Jude</td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Thomas</td>
+    <td>St Thomas</td>
+    <td> Zone 2</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Mathew</td>
+    <td>St Alphonsa Unit</td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Joy Abraham</td>
+    <td>St Paul Unit</td>
+    <td>Zone 4</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Varghese</td>
+    <td>St Antony Unit</td>
+    <td>Zone 3</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr> -->
+
+</table>
+
+
+
+</div>
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxex(null)">
+  Contact Details
+</button> -->
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade"  id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"  role="document">
+    <div class="modal-content" >
+
+
+        
+
+      <div   class="modal-body" style="height:350px ;" >
+
+        <img src="" id="image" style="width:40%; height: 45%; float: right;">
+      
+     <h2>  <input  style="border:none; position: absolute; top: 15px; width:20% ;" type="text" id="NameMod"><br></h2>
+
+
+      <label>Family:</label>
+       <input type="text" id="familyy"><br> 
+
+        
+       <label>Unit:</label>
+       <input  style="width:20%;" type="text" id="Unit">
+
+       <label>Regno:</label>
+       <input style="width:10%;" type="text" id="Email"><br>
+
+       <label>Mumbai Address:</label>
+       <input type="text" id="Zone"><br>
+
+
+       <label>Kerala Address:</label>
+       <input type="text" id="Zone">
+       <br>
+
+
+<label>Native Diocese:</label>
+       <input type="text" id="Zone">
+       <br>
+
+<label>Native  Parish:</label>
+       <input type="text" id="Zone">
+       <br>
+
+<table class="table table-hover">
+  <thead>
+  <tr class="header">
+    
+    <th>Sr No</th>
+    <th>Name</th>
+    <th >Unit Name</th>
+    <th>Email Id</th>
+    <th >Contact </th>
+  </tr>
+   </thead> 
+   <tbody>
+     <tr>
+       
+      <td></td>
+      <td><input type="text" style="border: none;" id="familyy"></td>
+
+     </tr>
+
+
+   </tbody>
+</table>
+
+      </div>
+
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Firestore Libraries-->
+<script type="text/javascript">
+  
+</script>
+
+  <script id="MainScript">
+  
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyDMiZGLeWBAa0D0qkbc_D7tVBNeWYrQVfQ",
+  authDomain: "shc-bhy.firebaseapp.com",
+  databaseURL: "https://shc-bhy-default-rtdb.firebaseio.com",
+  projectId: "shc-bhy",
+  storageBucket: "shc-bhy.appspot.com",
+  messagingSenderId: "833178477745",
+  appId: "1:833178477745:web:a6f5b940104f2722fa2e90",
+  measurementId: "G-H9YGYYHVTB"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+let db = firebase.firestore();
+
+
+
+
+function GetAllDataOnce(){
+  db.collection("family_name").get().then((querySnapshot)=>{
+
+    var family =[];
+    querySnapshot.forEach(doc =>{
+
+      family.push(doc.data());
+    
+
+    });
+    
+ AddAllItemsToTheTable(family);
+   
+  });
+}
+
+function GetAllDataRealtime(){
+  db.collection("family_name").get().then((querySnapshot)=>{
+
+    var family =[];
+    querySnapshot.forEach(doc =>{
+
+      family.push(doc.data());
+
+
+
+    });
+
+
+   AddAllItemsToTheTable(family);
+
+  });
+}
+
+
+
+
+
+
+var stdNo=0;
+
+var brother=[];
+var tbody =document.getElementById('tbody1');
+
+function AddItemToTable(name,unit,email,zone,Image,familyy){
+
+  var trow =document.createElement('tr');
+
+  var td1 =document.createElement('td');
+
+  var td2 =document.createElement('td');
+
+  var td3 =document.createElement('td');
+  var td4 =document.createElement('td');
+  var td5 =document.createElement('td');
+ var td6 =document.createElement('td');
+ var td7 =document.createElement('td');
+
+
+brother.push([name,unit,email,zone, Image,familyy]);
+  td1.innerHTML = ++stdNo;
+
+   td2.innerHTML = name;
+    td3.innerHTML = unit;
+     td4.innerHTML = email;
+     td5.innerHTML = zone;
+      td6.innerHTML = Image;
+      td7.innerHTML = familyy;
+     
+     
+trow.appendChild(td1);
+
+trow.appendChild(td2);
+
+trow.appendChild(td3);
+
+trow.appendChild(td4);
+
+
+
+var contact =document.createElement("div");
+contact.innerHTML = '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxex('+stdNo+')">  Contact Details </button>'
+
+
+trow.appendChild(contact);
+tbody.appendChild(trow);
+
+
+
+
+}
+
+function AddAllItemsToTheTable(familyDocList){
+stdNo=0;
+let m="";
+let n=null;
+let p=null;
+
+tbody.innerHTML="";
+familyDocList.forEach(element =>{
+
+let m= element.Unit;
+
+AddItemToTable(element.Name,element.Unit,element.Email,element.Zone,element.Image,element.Family);
+console.log(" diii");
+ if(n=== null){
+  n=m
+console.log(n)
+ }
+else{
+if(n===m){
+  console.log(element.Name);
+  p=n;
+  n=null;
+}
+
+}
+
+
+
+
+});
+
+
+
+}
+
+
+window.onload = GetAllDataOnce;
+
+var NameMod =document.getElementById('NameMod');
+var Unit = document.getElementById('Unit');
+var Email =document.getElementById('Email');
+var Zone =document.getElementById('Zone'); 
+var image =document.getElementById('image');
+var familyy =document.getElementById('familyy');
+
+
+function FillTboxex(index){
+if(index==null){
+  NameMod.value ="";
+  Unit.value ="";
+  Zone.value ="";
+  Email.value ="";
+  
+}
+else{
+  --index;
+
+       NameMod.value =brother[index][0];
+      Unit.value =brother[index][1];
+      Zone.value =brother[index][3];
+      Email.value =brother[index][2];
+     image.value =brother[index][4]
+      familyy.value=brother[index][5];
+      console.log(brother[index][5]);
+
+      document.getElementById("image").src=brother[index][4];
+}
+
+}
+   
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

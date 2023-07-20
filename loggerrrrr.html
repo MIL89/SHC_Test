@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Phone Authentication</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+    function onSubmit(token) {
+      alert('thanks ' + document.getElementById('field').value);
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      if (!document.getElementById('field').value) {
+        alert("You must add text to the required field");
+      } else {
+        grecaptcha.execute();
+      }
+    }
+
+    function onload() {
+      var element = document.getElementById('submit');
+      element.onclick = validate;
+    }
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+  <h1>Firebase Phone Authentication</h1>
+
+  <form id="verificationForm">
+    <input type="text" id="phoneNumber" placeholder="Phone Number">
+     <div id="recaptcha" class="g-recaptcha"
+          data-sitekey="_your_site_key_"
+          data-callback="onSubmit"
+          data-size="invisible"></div>
+    <button type="button" onclick="sendVerificationCode()">Send Verification Code</button>
+    <br>
+    <input type="text" id="verificationCode" placeholder="Verification Code">
+    <button type="button" onclick="signInWithVerificationCode()">Sign In</button>
+  </form>
+
+  <script>
+    // Firebase configuration
+    var firebaseConfig = {
+       apiKey: "AIzaSyDMiZGLeWBAa0D0qkbc_D7tVBNeWYrQVfQ",
+  authDomain: "shc-bhy.firebaseapp.com",
+  databaseURL: "https://shc-bhy-default-rtdb.firebaseio.com",
+  projectId: "shc-bhy",
+  storageBucket: "shc-bhy.appspot.com",
+  messagingSenderId: "833178477745",
+  appId: "1:833178477745:web:a6f5b940104f2722fa2e90",
+  measurementId: "G-H9YGYYHVTB"
+    };
+
+    // Initialize Firebase app
+    firebase.initializeApp(firebaseConfig);
+this.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    // Send verification code to the provided phone number
+    function sendVerificationCode() {
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var appVerifier = new firebase.auth.RecaptchaVerifier('verificationForm');
+
+      firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then(function(confirmationResult) {
+          window.confirmationResult = confirmationResult;
+          console.log("Verification code sent.");
+        })
+        .catch(function(error) {
+          console.log("Error sending verification code:", error);
+        });
+    }
+
+    // Sign in with the provided verification code
+    function signInWithVerificationCode() {
+      var verificationCode = document.getElementById("verificationCode").value;
+      confirmationResult.confirm(verificationCode)
+        .then(function(result) {
+          console.log("Phone authentication successful.");
+          checkPhoneInDatabase(result.user.phoneNumber);
+        })
+        .catch(function(error) {
+          console.log("Phone authentication error:", error);
+        });
+    }
+
+    // Check if the phone number is present in the Realtime Database
+    function checkPhoneInDatabase(phoneNumber) {
+      var databaseURL = "https://shc-bhy-default-rtdb.firebaseio.com";
+      var databaseRef = firebase.database().ref("users");
+      const database = firebase.database();
+      var database_Ref = database.ref("users")
+
+
+      databaseRef.orderByChild("phone").equalTo(phoneNumber).once("value")
+        .then(function(snapshot) {
+          if (snapshot.exists()) {
+            console.log("Phone number found in the database.");
+          } else {
+            console.log("Phone number not found in the database.");
+          }
+        })
+        .catch(function(error) {
+          console.log("Error checking phone number in the database:", error);
+        });
+    }
+  </script>
+  <script>onload();</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Filter search result page - Bootdey.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    	<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+</style>
+</head>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+
+<div class="col-md-12">
+<div class="grid search">
+<div class="grid-body">
+<div class="row">
+
+<div class="col-md-3">
+<h2 class="grid-title"><i class="fa fa-filter"></i> Filters</h2>
+<hr>
+
+<h4>By category:</h4>
+<div class="checkbox">
+<label><input type="checkbox" class="icheck"> Unit NAme</label>
+</div>
+<div class="checkbox">
+<label><input type="checkbox" class="icheck"> Zone</label>
+</div>
+<div class="checkbox">
+<label><input type="checkbox" class="icheck"> Occupation</label>
+</div>
+
+
+<div class="padding"></div>
+
+<h4>By Date of Birth:</h4>
+From
+<div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
+<input type="date" class="form-control">
+
+</div>
+<input type="hidden" id="dtp_input1" value>
+To
+<div class="input-group date form_date" data-date="2014-06-14T05:25:07Z" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2">
+<input type="date" class="form-control">
+
+</div>
+<input type="hidden" id="dtp_input2" value>
+
+<div class="padding"></div>
+
+<div class="slider-primary">
+<div class="slider slider-horizontal" style="width: 152px;"><div class="slider-track"><div class="slider-selection" style="left: 30%; width: 50%;"></div><div class="slider-handle round" style="left: 30%;"></div><div class="slider-handle round" style="left: 80%;"></div></div><div class="tooltip top hide" style="top: -30px; left: 50.1px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">300 : 800</div></div></div>
+<br>
+<button id="myBtn">Apply</button>
+</div>
+
+</div>
+
+
+<div class="col-md-9">
+<h1><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; margin-right: 25px; " src="img/icon/search.jpg" alt="">Directory</h1>
+<hr>
+
+<div class="input-group">
+<!-- 
+
+<input type="text" class="form-control" value=""> -->
+<input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<span class="input-group-btn">
+<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+</span>
+</div>
+
+
+<div class="padding"></div>
+<div class="row">
+
+
+
+
+<div class="table-responsive">
+
+
+
+
+<table id="myTable" class="table table-hover">
+  <thead>
+  <tr class="header">
+    
+    <th style="width:10%;">Sr No</th>
+    <th style="width:30%;">Name</th>
+    <th style="width:20%;">Phone</th>
+    <th style="width:20%;">Email</th>
+   
+  </tr>
+   </thead> 
+   <tbody id="tbody1"></tbody> 
+  <tr>
+    <td > </td>
+    <td id="data1"></td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+    
+  </tr> 
+<!--
+  <tr>
+    <td>Latha Francis</td>
+    <td>Little Flower Unit</td>
+    <td>Zone 4</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Frilly Francis</td>
+    <td>St thomas Unit</td>
+    <td>Zone 2</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>George</td>
+    <td>St Jude</td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Thomas</td>
+    <td>St Thomas</td>
+    <td> Zone 2</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Mathew</td>
+    <td>St Alphonsa Unit</td>
+    <td>Zone 1</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Joy Abraham</td>
+    <td>St Paul Unit</td>
+    <td>Zone 4</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr>
+  <tr>
+    <td>Varghese</td>
+    <td>St Antony Unit</td>
+    <td>Zone 3</td>
+    <td><button id="myBtn">Open Details</button></td>
+  </tr> -->
+
+</table>
+
+
+
+</div>
+
+
+<ul class="pagination">
+<li class="disabled"><a href="#">«</a></li>
+<li class="active"><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li><a href="#">»</a></li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--Firestore Libraries-->
+<script type="text/javascript">
+	
+</script>
+
+  <script id="MainScript">
+  
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyDMiZGLeWBAa0D0qkbc_D7tVBNeWYrQVfQ",
+  authDomain: "shc-bhy.firebaseapp.com",
+  databaseURL: "https://shc-bhy-default-rtdb.firebaseio.com",
+  projectId: "shc-bhy",
+  storageBucket: "shc-bhy.appspot.com",
+  messagingSenderId: "833178477745",
+  appId: "1:833178477745:web:a6f5b940104f2722fa2e90",
+  measurementId: "G-H9YGYYHVTB"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+let db = firebase.firestore();
+
+
+
+
+function GetAllDataOnce(){
+  db.collection("family_name").get().then((querySnapshot)=>{
+
+    var family =[];
+    querySnapshot.forEach(doc =>{
+
+      family.push(doc.data());
+    
+
+    });
+    
+ AddAllItemsToTheTable(family);
+   
+  });
+}
+
+function GetAllDataRealtime(){
+  db.collection("family_name").get().then((querySnapshot)=>{
+
+    var family =[];
+    querySnapshot.forEach(doc =>{
+
+      family.push(doc.data());
+
+     
+
+    });
+
+   AddAllItemsToTheTable(family);
+  });
+}
+
+
+var stdNo=0;
+var tbody =document.getElementById('tbody1');
+
+function AddItemToTable(name,phone,email){
+
+  var trow =document.createElement('tr');
+
+  var td1 =document.createElement('td');
+
+  var td2 =document.createElement('td');
+
+  var td3 =document.createElement('td');
+  var td4 =document.createElement('td');
+
+  td1.innerHTML = ++stdNo;
+
+   td2.innerHTML = name;
+    td3.innerHTML = phone;
+     td4.innerHTML = email;
+      
+     
+trow.appendChild(td1);
+
+trow.appendChild(td2);
+
+trow.appendChild(td3);
+
+trow.appendChild(td4);
+
+tbody.appendChild(trow);
+
+
+
+
+}
+
+
+
+function AddAllItemsToTheTable(familyDocList){
+stdNo=0;
+tbody.innerHTML="";
+familyDocList.forEach(element =>{
+AddItemToTable(element.Name,element.Phone,element.email);
+
+
+
+
+
+console.log(element.Name);
+});
+}
+
+
+window.onload = GetAllDataOnce;
+
+
+</script>
+
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("tbody")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+</script>
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
