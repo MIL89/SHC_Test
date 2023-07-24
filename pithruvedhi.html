@@ -29,6 +29,138 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+    /* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: orange;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containers {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.containers::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #EABD8C;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.leftt {
+  left: 0;
+  color:white;
+}
+
+/* Place the container to the right */
+.rightt {
+  left: 50%;
+   color:white;
+}
+
+/* Add arrows to the left container (pointing right) */
+.leftt::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #EABD8C;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #EABD8C;
+}
+
+/* Add arrows to the right container (pointing left) */
+.rightt::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #EABD8C;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #EABD8C transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.rightt::after {
+  left: -13px;
+}
+
+/* The actual content */
+.contentt {
+  padding: 20px 30px;
+  background-color: #EABD8C;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .containers {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .containers::before {
+  left: 60px;
+  border: medium solid #EABD8C;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #EABD8C transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .leftt::after, .rightt::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .rightt {
+  left: 0%;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -145,36 +277,31 @@
                 
 <span>
     
-    Under the strong and dynamic leadership of Rev. Fr. Binoy Binoy Kannanikal, Mother Superior Vimal Maria, our mathrusangam is working very effectively. We have 180 members. Few main activities are listed below:
+    <p>Sacred Heart Bhayandar Pitruvedi has a rich history of community engagement and achievements. It was established in 2015 under the guidance of former parish priest Fr. Jomon Kurishinkal, aiming to unite married men and increase their involvement in church activities. The organization's growth was marked by the election of Mr. P.J. Varghese as its representative in the Parish council.
+
+Over the years, Pitruvedi actively participated in various Diocesan and forane activities and competitions, bringing home prizes and accolades. Notable wins include the KAIRO Bible Quiz and Diocesan Drama competition. Additionally, the organization initiated the "Food for the Poor" program to provide assistance to needy families
+</p>
+<br>
+
+Amid the challenges posed by the COVID-19 pandemic, Pitruvedi members demonstrated their dedication to the community by preparing food kits for affected families in collaboration with the Karunya Trust.
+
+In the years that followed, Pitruvedi continued its impactful endeavors. Notably, in 2021-2023, new leaders were elected, and the organization actively engaged in initiatives such as NORKA registration, obtaining Voters IDs, and participating in sports and cultural events. They also visited Gyan Sathee Rehabilitation Centre, providing food and support for orphaned children.
+
+The history of Pitruvedi showcases a strong commitment to service, community welfare, and active participation in various endeavors, making a positive difference in the lives of many.
+
+
+
+
+
+
+
 <br>
 
 <br>
 
-<h5>LITURGICAL</h5>
 
 
 
-Mathrusangam members are leading rosary everyday before Holy Mass. Mathrusangam with the support of prayer group initiated an online grocery for 24 hours x 31 days in the month of October and dedicated rosary everyday. Mathrusangam had conducted special prayers to fight against corona. They have recited around 9500 rosaries (- highest count from our Forane) for the intention of Covid affected people which was conducted by the International Syro Malabar Community. Mathrusangam had also actively participated in prayer marathon conducted by Diocese of Kalyan mathrusangam.
-<br>
-In the Month of December, all members recited ejaculatory prayers to welcome Infant Jesus in our hearts. To get enriched by Word of God we are uploading Bible - one chapter everyday in our WhatsApp group, with it's explanation which helps to understand more on Word of God. Conducted "Parihaara Yatra" for Nashik and visited 7 churches in this Lenten Season. Also took the responsibilities of liturgical assistances and church cleaning in special occasions.
-
-<br>
-<br><br>
-<h5>SOCIAL ACTIVITIES & CHARITY:</h5>
-
-In October Mathrusangam had collected groceries everyday from church members to help poor and the needy and received cash of Rs. 40,000. We have handed it over to Santwanagram, (orphanage) Kalyan. Mathrudinam had collected clothes from church members and gave to Kalyan mathrusangam to help poor and the needy. Mathrudinam was celebrated on 8th September with Solemn Mass followed by a seminar on 12th September. The subject was "mental stress of current situation and health issues of women". Faculty (online) : Sr. Dr. Jisha - was the guest speaker. After the session, online cultural program were there and all the members enjoyed it. Also to motivate mothers talents they had conducted Solo singing competition at Mathrudinam day. Women's day was celebrated and conducted an exhibition on Famous women Personalities, done by our different units of Parish. It gave insight / inspiration to all the members.
-
-
-<br>
-<br><br>
-<h5> ENTERTAINMENT:</h5>
-
-To relieve the daily pressure of mothers a movie was projected were all the mothers were able to relax and spend time with other mothers to which there was a great participation and they had fun. enjoyed well.
-<br>
-<br><br>
-<h5>SKILL DEVELOPMENT:</h5>
-
-To develop the skill of rosary making among the parish Bhayander Mathrusangam had hosted a Rosary making workshop. A lot of the church members participated and learnt to make rosary.
 
 
 </span>
@@ -185,57 +312,276 @@ To develop the skill of rosary making among the parish Bhayander Mathrusangam ha
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-xxl py-5">
+        <div class="container">
+            <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
+                <h1 class=" text-center  display-6 mb-5">Pithruvedi Events</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/bless.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">The Sacred Heart Church celebrated Ash Monday in solemn remembrance of human mortality and need for reconciliation with God and marked the beginning of the Lent of Repentance by offering Holy Qurbana led by Parish Priest Fr. Binoy </p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/Co5K36JPS2V/?igshid=MDJmNzVkMjY=">Parents Day</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/bless.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">The Sacred Heart Church celebrated Ash Monday in solemn remembrance of human mortality and need for reconciliation with God and marked the beginning of the Lent of Repentance by offering Holy Qurbana led by Parish Priest Fr. Binoy </p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/Co5K36JPS2V/?igshid=MDJmNzVkMjY=">Grand Parents Day</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/Vidya.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">Sacred Heart Church Bhayandar conducted Vidyarambam with starting of new academic year of catechism with lighting of lamp , blessings and offering given by new students and teachers. Also we welcomed jesus kids to catechism dept</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CtWrMzlx-j5/?igshid=MzRlODBiNWFlZA==">Vidyarambam </a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+
+
+<!-- 
+                <div  style="padding-top: 3%;" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/Ezithu.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">Ezhuthiniruthu, a significant event, marked the beginning of children's journey in writing and reading. t is a memorable occasion that symbolizes the commencement of their formal education and the development of fundamental skills in writing and reading.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CtRz1uTPzWL/?igshid=MTc4MmM1YmI2Ng==">Ezhuthiniruthu</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div style="padding-top: 3%;" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/Farewell.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">Sacred Heart Church Bhayandar hosted Farewell for 12th Std Catechism students under the leadership of Catechism dept. Enriching and motivating speech was given by Anthony Sir. There were games for 12std students, gift exchanges.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CoWqWkWPMqR/?igshid=MTc4MmM1YmI2Ng==">Farewell</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div style="padding-top: 3%;"class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/Euchrist.jpg" alt="">
+                            
+                    <div class="d-flex align-items-center bg-light">
+
+                            <div>
+                              <br>
+                         <p style="text-align: justify;">Sacred Heart Church Bhayandar under the leadership of Catechism organized a 2 day Eucharistia Camp for all students
+                            The retreat camp was conducted by brothers and managed by catechism dept. was highly enjoyed by all the students </p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
+                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
+                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
+                            </div>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/Ckq96uKqogi/?igshid=MTc4MmM1YmI2Ng==">Eucharistia</a>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- Events End -->
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
 <div class="think">  
-                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Our Journey</h1>
+                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Chronicles of Growth</h1>
        </div>
 
+<br>
+<br>
+
+<div class="timeline">
+  <div class="containers leftt">
+    <div class="contentt">
+      <h2>2015</h2>
+      <p>
+In 2015, Sacred Heart Pithruvedi was established to engage married men in church activities, with Mr. P.J. Varghese elected as the representative, and it was officially inaugurated on 23rd August 2015, with Rev. Father George Vattamattam and Adv. Mr. Samji Joseph as chief guests.</p>
+    </div>
+  </div>
+  <div class="containers rightt">
+    <div class="contentt">
+      <h2>2016</h2>
+      <p>Sacred Heart Bhayandar Pitruvedi actively engaged in Diocesan and forane activities, achieving competition success like ncluding winning 3rd prize in the Extempore Speech competition, 2nd prize in the Biblical Short play competition, and initiated the "Food for the Poor" program, providing monthly fresh food packets to those in need.</p>
+    </div>
+  </div>
+  <div class="containers leftt">
+    <div class="contentt">
+      <h2>2017</h2>
+      <p>On 19th March 2017, Pithruvedi celebrated the feast of St. Joseph grandly, and on 26th March 2017, they organized a successful Free Medical Camp with Karuna Hospital Borivali, attended by 323 patients. Additionally, in the KAIROS-2017-BIBLE QUEZ Competition, their team won 1st prize with members Mr. M A Jose, Mr. Joseph Thomas, and Mr. Varghese Kuttikat.</p>
+    </div>
+  </div>
+  <div class="containers rightt">
+    <div class="contentt">
+      <h2>2018</h2>
+      <p>On 25th February 2018, Bhayandar Pithruvedi elected new leaders, achieved 1st prize in KAIROS-2018 BIBLE QUEZ Competition, actively participated in various events, and organized a successful Free Medical camp.</p>
+    </div>
+  </div>
+  <div class="containers leftt">
+    <div class="contentt">
+      <h2>2019</h2>
+      <p>
+In 2019, Bhayander Pitruvedi excelled, securing 1st prizes in KAIRO -2019 BIBLE QUEZ Competition and Kalyan Diocesan Badminton Competition, while also initiating a redesigned "Food for the Poor" program and winning 1st prize in the Diocesan Drama competition with "Vasumathi," earning accolades for Best Director and Best Child Artist.</p>
+    </div>
+  </div>
+  <div class="containers rightt">
+    <div class="contentt">
+      <h2>2020</h2>
+      <p>During the time of Covid -19 Pandemic, Our Pithruvedi members actively participated in preparing food kits for the Covid  affected families under the banner of  Karunya Trust.</p>
+    </div>
+  </div>
 
 
 
-<div class="container">
-<h3 class="card-title"></h3>
-<div class="row">
-<div class="col-md-12">
-<div class="main-timeline3">
-<div class="timeline">
-<div class="timeline-icon"><span class="year">2018</span></div>
-<div class="timeline-content">
-<h3 class="title">Web Desginer</h3>
-<p class="description">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
-</p>
-</div>
-</div>
-<div class="timeline">
-<div class="timeline-icon"><span class="year">2017</span></div>
-<div class="timeline-content">
-<h3 class="title">Web Developer</h3>
-<p class="description">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
-</p>
-</div>
-</div>
-<div class="timeline">
-<div class="timeline-icon"><span class="year">2016</span></div>
-<div class="timeline-content">
-<h3 class="title">Web Desginer</h3>
-<p class="description">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
-</p>
-</div>
-</div>
-<div class="timeline">
-<div class="timeline-icon"><span class="year">2015</span></div>
-<div class="timeline-content">
-<h3 class="title">Web Developer</h3>
-<p class="description">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="containers leftt">
+    <div class="contentt">
+      <h2>2021</h2>
+      <p>
+During 2021-2023, Pithurvedi Unit elected new leaders, celebrated St. Joseph Day, organized Young Couples Day, and engaged in charity, providing food for approximately 350  orphaned children and donating Rs. 40,000 for classroom repair work.
+into 1 line.</p>
+    </div>
+  </div>
+
+
+<div class="containers rightt">
+    <div class="contentt">
+      <h2>2022</h2>
+      <p>Pitruvedi accomplished NORKA registration for 250+ members and obtained Voters ID for 52 members, secured 3rd prize in Badminton at the diocesan level, won 2nd prize in the Zone level for the Christmas Crib Competition, and actively engaged in Appachan’s Chayakkada and the Musical night during the parish feast.</p>
+    </div>
+  </div>
+
+
+<div class="containers leftt">
+    <div class="contentt">
+      <h2>2023</h2>
+      <p> In June 2023, Pitruvedi held its elections for the year 2023-24, with Fr. Binoy Achan and Sister Vimal Maria present. Mr. E P Joseph became the new President, along with other elected members for various positions. </div>
+  </div>
+
+
 </div>
 
 
@@ -252,14 +598,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultric
 <br>
 <br>
 
-<img style ="width:73% ; height: 60%; float: right; padding-left: 15%; margin-top: 40px;" class="img-fluid me-3" src="img/math_com.jpg" alt="" >
+<img style ="width:73% ; height: 60%; float: right; padding-left: 15%; " class="img-fluid me-3" src="img/math_com.jpg" alt="" >
           
           <div style="padding-top: 25%; margin-left: 670px;">
         <span><h5>Mathrusangam Committee for the year 2023-2025</h5></span>
     </div>              
 
     </div>  
-<div style="margin-top: -460px; margin-left:20px;">
+<div style="margin-top: -360px; margin-left:20px;">
 
 
 
