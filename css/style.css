@@ -127,7 +127,10 @@
         font-family: 'Vivaldi', sans-serif;
          }
 
-
+ .bar{
+       
+        font-family: 'Vivaldi', sans-serif;
+         }
 
 
     .navbar .navbar-nav {
@@ -152,6 +155,10 @@
         transition: .5s;
     }
 
+     .bar{
+        
+        font-family: 'Vivaldi', sans-serif;
+         }
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
@@ -194,7 +201,11 @@
         position: relative;
         min-height: 450px;
     }
-    
+
+     .bar{
+       
+        font-family: 'Vivaldi', sans-serif;
+         }
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
