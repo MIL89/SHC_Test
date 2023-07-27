@@ -30,130 +30,99 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>
+    <style type="text/css">
         
-
-        .cate{
-            width:47% ;
-             height: 80%; 
-             float: right; 
-             padding-top: 15px;
+/*
+ ul li {
+            list-style: square;
         }
-        .create{
-             margin-left:30px;
-        }
-    table {
-            border: 1px solid black;
-      
-            width: 40%;
-
-            margin-left: 95px; 
-            
-      
-        margin-top: -580px;
-          text-align: center;
-          color: black;
-        }
-          .tabler{
-               margin-top: -340px;
-          }
-    th, td {
-            border: 1px solid black;
-            padding: 5px;
-            color: black;
-        }
-          
-        tr:nth-child(odd) {
-            background-color: #c89eab;
-        }
-* {
-  box-sizing: border-box;
-}
-.tagline{
-   padding-top: 25px; 
-   margin-left: 1080px;
-}
-@media (max-width: 768px) {
-.container_i {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-
-   .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.responsive-para{
-
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-    text-align: center;
-}
-
-    }
-.columner {
-  float: left;
-  width: 23.33%;
- margin-left: 1%;
   
-}
-
-/* Clearfix (clear floats) */
-.rower::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-@media (max-width: 991.98px) {
-     .create{
-             margin-left:15px;
+        ul li::marker {
+            animation-name: GFG;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
         }
-        .cate{
-        width:95% ;
-        height: 94%;
-       
-                
-        padding-top: 5%;
-    }
-table{
-            border: 1px solid black;
-      
-            width: 95%;
-
-           
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 70px;
-          text-align: center;
-          color: black;
-          margin-bottom: 20px;
+  
+        ul li:nth-child(1)::marker {
+            animation-delay: 0;
         }
-        .tagline{
-            padding-top: 10%; 
-            margin-left: 85px;
-            font-size: 15px;
+  
+        ul li:nth-child(2)::marker {
+            animation-delay: 0.5s;
         }
-        .tabler{
-               margin-top: 60px;
-          }
-        
-    }
-</style>
+  
+        ul li:nth-child(3)::marker {
+            animation-delay: 1.0s;
+        }
+  
+        ul li:nth-child(4)::marker {
+            animation-delay: 1.5s;
+        }
+  
+        ul li:nth-child(5)::marker {
+            animation-delay: 2.0s;
+        }
+            
+         ul li:nth-child(6)::marker {
+            animation-delay: 2.5s;
+        }
+        ul li:nth-child(7)::marker {
+            animation-delay: 3.0s;
+        }
+        ul li:nth-child(8)::marker {
+            animation-delay: 3.5s;
+        }
+        ul li:nth-child(9)::marker {
+            animation-delay: 4.0s;
+        }
+        ul li:nth-child(10)::marker {
+            animation-delay: 4.5s;
+        }
+        ul li:nth-child(11)::marker {
+            animation-delay: 5.0s;
+        }
+        ul li:nth-child(12)::marker {
+            animation-delay: 5.5s;
+        }
+        ul li:nth-child(13)::marker {
+            animation-delay: 6.0s;
+        }
+        ul li:nth-child(14)::marker {
+            animation-delay: 6.5s;
+        }
 
+        ul li:nth-child(15)::marker {
+            animation-delay: 7.0s;
+        }
+        ul li:nth-child(16)::marker {
+            animation-delay: 7.5s;
+        }
+        ul li:nth-child(17)::marker {
+            animation-delay: 8.0s;
+        }
+        ul li:nth-child(18)::marker {
+            animation-delay: 8.5s;
+        }
+        ul li:nth-child(19)::marker {
+            animation-delay: 9.0s;
+        }
+
+            ul li:nth-child(20)::marker {
+            animation-delay: 9.5s;
+        }
+        @keyframes GFG {
+            from {
+                font-size: 12px;
+            }
+  
+            to {
+                font-size: 30px;
+                color: green;
+            }
+        }
+*/
+
+    </style>
 </head>
 
 <body>
@@ -162,17 +131,19 @@ table{
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
- <!-- Navbar Start -->
+
+
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0 " style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px;" src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
+            <h1 class="display-4 m-0 title" style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; " src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="events.html" class="nav-item nav-link">Events</a>
                 <div class="nav-item dropdown">
@@ -181,7 +152,7 @@ table{
                         <a href="parish.html" class="dropdown-item">Parish Council</a>
                         <a href="units.html" class="dropdown-item">Units</a>
                         <a href="catechism.html" class="dropdown-item">Catechism</a>
-                        <a href="forane.html" class="dropdown-item">Forane</a>
+                        
                     </div>
                 </div>
                <div class="nav-item dropdown">
@@ -191,30 +162,47 @@ table{
                         <a href="mathrusangam.html" class="dropdown-item">Mathrusangam</a>
                         <a href="youth.html" class="dropdown-item">Youth</a>
                         <a href="choir.html" class="dropdown-item">Choir</a>
-                        <a href="alter.html" class="dropdown-item">Alter Angels</a>
+                        <a href="alter.html" class="dropdown-item ">Alter Angels</a>
+                        <a href="alter.html" class="dropdown-item">Karunya Trust</a>
+                        <a href="alter.html" class="dropdown-item">Prayer Group</a>
+                        <a href="alter.html" class="dropdown-item">JNF</a>
                     </div>
                 </div>
-        
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="contact.html" class="dropdown-item">Contact Us</a>
+                        <a href="404.html" target="_blank" class="dropdown-item">Directory</a>
+                        <a href="404.html" class="dropdown-item">Payment</a>
+                    </div>
+                </div>
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
                 <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/profile.php?id=100082052049136&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.youtube.com/channel/UCe4v70ixUEkQecglePl4Zpg"><i class="fab fa-youtube"></i></a>
                 <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://instagram.com/sacred_heart_catholic_church?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
             </div>
+            
+
         </div>
     </nav>
     <!-- Navbar End -->
 
 
+
+
+
+
+
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-4">JNF</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">Karunya Trust</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">JNF</li>
+                    <li class="breadcrumb-item active" aria-current="page">Karunya Trust</li>
                 </ol>
             </nav>
         </div>
@@ -223,75 +211,72 @@ table{
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-5">Jesus Nurse Fraternity (JNF)</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+    
+ <div class="container-xxl py-5">
+        <div style="text-align: justify;" class="container">
+            <img src="img/icon/karunya.jpg" alt="Snow" style="height: 120px; width: 120px; float: left; margin-right: 40px;">
+              <h1  style="padding-top:40px;" class="display-6 mb-5"> Karunya Trust</h1>
+             
+             <br>
+             <br>
+            <div class="row g-5">
+                
+<span>
+    
+    Karunya Trust considers the roles of a facilitator and implementer as its primary functions. These roles involve actively partnering with various stakeholders for the development of society, with a special focus on children. The Trust aims to provide a safety net for thousands of vulnerable children who lack basic necessities and opportunities for growth and development.
 
-                <div class="text-center mx-auto wow fadeInUp"  data-wow-delay="0.5s" >
-                <p style="text-align: justify;">To fulfill our mission of serving the sick and needy, JNF have undertaken several initiatives. Firstly, the active reach out to those who are unwell and require assistance. Our dedicated team ensures that the team provides them with the necessary support, including medical care, emotional support, and access to resources.</p>
-                    <br>
-                  
+Regardless of caste, creed, and religion, Karunya Trust caters to the needs of needy children, ensuring that no child is left behind. One of the key objectives is to design and implement new programs that contribute to the overall development of children, encompassing educational, vocational, and health facilities.
+<br>
+<br>
 
-          <p style="text-align: justify;">      In addition, we firmly believe in the importance of preventive healthcare, especially for individuals with limited financial means. To address this, various awareness campaigns are conducted to educate the public about affordable health check-up packages. By spreading awareness, the aim  is to empower individuals to prioritize their health and take advantage of accessible healthcare options.
+Moreover, the trust places significant emphasis on the financial well-being of families by offering vocational training and income generation programs. These efforts are directed at empowering families to improve their economic status and provide a stable environment for their children's growth.
 
-                Recognizing the specific healthcare needs of industrial laborers, we have established a clinic tailored to cater to their requirements. This specialized clinic provides comprehensive medical services, focusing on the health concerns commonly faced by this demographic. We strive to make quality healthcare easily accessible and convenient for the industrious workforce.</p>
-                <br>
-               
-<p style="text-align: justify;">
-                Furthermore, there are regularly organize blood donation camps and free medical check-up camps. These camps serve as a platform for individuals to contribute to the noble cause of saving lives through blood donations. Simultaneously, we provide free medical check-ups to help identify potential health issues early on and offer appropriate guidance and treatment.
-                Through these initiatives, we aim to make a positive impact on the lives of the sick, raise awareness about affordable healthcare options, and provide necessary medical support to those in need. By joining hands with compassionate individuals and organizations, we can create a healthier and more caring community for all
-                </p>
-                </div>
-                                
+All activities undertaken by Karunya Trust are inspired by the model established by Mother Teresa, and the Trust is dedicated to her memory. We receive multiple requests for help, ranging from education to m.edical assistance. To ensure the legitimacy of these requests, we personally visit the homes of the requestors. During these visits, we carefully assess the genuineness of their situations and compile detailed reports.
+
+
+<br>
+<br>
+These reports are then subjected to thorough analysis, taking into account the severity of each case and the specific assistance required. For financial aid related to education, we issue cheques directly in the name of the schools or organizations involved. 
+
+
+This ensures that the support reaches the intended beneficiaries, enabling them to access the educational resources they need to improve their lives and future prospects. Our commitment to verifying and channeling help responsibly allows us to make a meaningful difference in the lives of those who genuinely need it. The dedication to Mother Teresa's legacy underscores the Trust's commitment to serving society and caring for the most vulnerable members, particularly children.
+
+
+</span>
+  
 
 
 
-
-
+</div>
+</div>
+</div>
 
 
 
 
-
-
-    <div class="container-xxl py-5">
+<div class="container-xxl py-5">
         <div class="container">
             <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
-                <h1 class=" text-center  display-6 mb-5">Events </h1>
+                <h1 class=" text-center  display-6 mb-5">Events  Conducted</h1>
             </div>
-            <div class="row g-4 justify-content-center" style="margin-bottom: 15px;">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="img/JNF_Event.jpg" alt="">
-                        
+                        <img class="img-fluid" src="img/relocation.jpg" style="height:320px; width: 100%;" alt="">
+                            
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
+                                
                               <br>
-                         <p style="text-align: justify;"> Heart Felt felicitation to the brave COVID warriors who tirelessly served on the frontlines, battling the pandemic and ensuring the safety and well-being of our communities and congratulating the dedicated nurses who have completed 25 years of exceptional service.</p>
+                         <p style="text-align: justify;">Relocating destitutes from the road to various aashrams provides them with shelter and a supportive community. This initiative aims to offer these vulnerable individuals a chance at a more dignified and secure life, fostering their physical and spiritual well-being.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0"> Felicitation </a>
+                            <a class="h4 mx-4 mb-0" href="#">Relocation</a>
                             
                            
                         </div>
@@ -299,22 +284,23 @@ table{
                     </div>
                     
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="padding-left: 20px;">
                     <div class="service-item">
-                        <img class="img-fluid" src="img/JNF_Event2.jpg" alt="">
+                        <img class="img-fluid" src="img/covid.jpg" style="height:320px; width: 100%;" alt="">
                             
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
                               <br>
-                         <p style="text-align: justify;">The BD Mastermind Quiz was conducted by the Infusion Nurses Society where as Ms. Pushpa Charles and Ms. Johncy Charles emerged as winners at the regional level, representing their respective parishes and showcasing their exceptional knowledge and skills.</p>
+                         <p style="text-align: justify;">
+During COVID relief efforts, the distribution of food kits played a vital role in supporting those in need. These kits, comprising essential non-perishable food items like rice, grains provided a lifeline to vulnerable individuals and families. </p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0">BD Mastermind Quiz</a>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/Co5K36JPS2V/?igshid=MDJmNzVkMjY=">Covid Relief</a>
                             
                            
                         </div>
@@ -324,155 +310,105 @@ table{
                 </div>
                 <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="img/bishh.jpg" alt="">
+                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/Vidya.jpg" alt="">
                             
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
                               <br>
-                         <p style="text-align: justify;">Solemn Holy communion was received by 5 children while Bishop of Kalyan Diocese Mar Thomas Elavanal. Further, SHC family  also celebrated Bishops 26th Episcopal Ordination and felicitated silver jubilarian couples and catechism students.</p>
+                         <p style="text-align: justify;">Sacred Heart Church Bhayandar conducted Vidyarambam with starting of new academic year of catechism with lighting of lamp , blessings and offering given by new students and teachers. Also we welcomed jesus kids to catechism dept</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CokiABJPWlv/?igshid=MDJmNzVkMjY=">Holy Communion</a>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CtWrMzlx-j5/?igshid=MzRlODBiNWFlZA==">Vidyarambam </a>
                             
                            
                         </div>
                         
                     </div>
                     
-                </div>
+                </div> -->
 
 
-
- -->
                
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
-
-
-
-
-
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div class="g-5" >
-                 <h1  style="text-align: center;" class="display-6 mb-5 text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 20px;"> JNF Commitee 2023-2025</h1>
-               
-
-<br>
-
-<div class="create">
-
-
-<img class="img-fluid me-3 cate" src="img/JNF_comm.jpg" alt="" >
-
-
-    </div>
-   <div class="tagline">
-        <span><h5>JNF Committe Members </h5></span>
-    </div> 
-
-
-                <table class="tabler">
-        <tr>
-            <th>Sr No</th>
-            <th>Name</th>
-            <th>Designation</th>
-        </tr>
-          
-        <tr>
-            <td>1.</td>
-            <td>Fr. Binoy Kannanaikkal</td>
-            <td>Parish Priest</td>
-        </tr>
-        
-        <tr>
-            <td>2.</td>
-            <td>Sr.Leena Maria</td>
-            <td>Animator</td>
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td>Sr.Vinaya Maria</td>
-            <td>Animator</td>
-        </tr>
-
-       
-        <tr>
-            <td>4.</td>
-            <td>Mrs.Bindumol Mathew</td>
-            <td>President</td>
-        </tr>
-
-
-        <tr>
-            <td>5.</td>
-
-            <td>Ms.Aleyamma Rajan</td>
-            <td>Secretary</td>
-        </tr>
-
-         <tr>
-            <td>6.</td>
-
-            <td>Mrs.Bindu Joppan</td>
-            <td>Committee Member</td>
-        </tr>
-
-        <tr>
-            <td>7.</td>
-            <td>Mrs.Sinda leo</td>
-            <td>Committee Member</td>
-        </tr>
-        <tr>
-            <td>8.</td>
-            <td>Mrs.Jancy Juby </td>
-            <td>Committee Member</td>
-        </tr>
-
-        <tr>
-            <td>9.</td>
-            <td>Mrs.Pushpa Charles </td>
-            <td>Ex-Official</td>
-        </tr>
-        
-        
-   </table>
-
-
+                </div>
+                
+                
             </div>
         </div>
     </div>
-</div>
+    <!-- Events End -->
 
-    <!-- Team End -->
+
+<!-- 
+                
+    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.5s" style="max-width: 900px;">
+                <h3 class="display-6 mb-5" style="margin-top:90px;">List Of Altar Angels 2023-2034</h3>
+            </div>
+
+
+<div style="margin-left:10px;">
+
+
+<img style ="width:57% ; height: 50%; float: right; padding-top: 5px;" class="img-fluid me-3" src="img/Alter_angel.jpg" alt="" >
+
+<div style="margin-top: 150px; margin-left: 700px; padding-bottom: 7px;">
+        <span><h5>Altar Angels for the year 2023-2024</h5></span>
+    </div>
+
+
+    </div>
+
+
+
+    
+
+
+<div data-wow-delay="0.15s">
+<ul  style="margin-left: 50px; margin-top: -770px">
+
+<br>
+                    <li>Sr. Leena Maria (Incharge)</li> 
+                    <li>John Joy (President)</li>
+                    <li>Shanon Biju (Secretary)</li>
+                    <li>Sam Manoj</li>
+                    <li>Edwin Ajex</li>
+                    <li>Shaun Siji</li>
+                    <li>Thomson Joseph</li>
+                    <li>    Alvis Shaji</li>
+                    <li>    Paul Joseph</li>
+                    <li>    Emmanuval Anthony</li>
+                    <li>    Joel Lijo</li>
+                    <li>    Chris Tomy</li>
+                     <li>   Jess Tomy</li>
+                    <li>    Ashwin Roy</li>
+                    <li>    Riyan Sajan</li>
+                    <li>    Daniel Anthony</li>
+                    <li>    Arush Roy</li>
+                    <li>    Alfred Jaison</li>
+                    <li>    Abin Kurian</li>
+
+                </ul>  
+  
+
+  </div>
+         
+
+               
+            </div>
+        </div>
+    </div>
+    Team End 
         
    
+
+ -->
+
+
    <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
