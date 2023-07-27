@@ -75,7 +75,7 @@
     
      .foot{
 
-            font-size: 30px;
+            font-size: 20px;
                     
          }
 }
@@ -95,8 +95,8 @@
             @media (max-width: 991.98px) {
 
                 .barr{
-   font-family: cursive; 
-    font-size: 70%;
+  font-family: Vivaldi, sans-serif;
+    font-size: 130%;
 }
         .move img {
 
@@ -164,7 +164,48 @@
   .sidenav a {font-size: 18px;}
 }
 
+@media (max-width: 991.98px) {
 
+
+.sidenav {
+    margin-top: 7%;
+  height: 100%;
+  width: 90;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow: auto;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+    
+}
 
 
 
