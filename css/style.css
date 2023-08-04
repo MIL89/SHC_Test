@@ -98,6 +98,8 @@
 @media (max-width: 768px) {
     .navbar .navbar-brand img {
     max-height: 50px;
+    margin-left: -20px;
+
 }
 
 
@@ -108,6 +110,7 @@
 
 .navbar .navbar-brand img {
        max-width: 50px;
+
 
          }
 
