@@ -29,53 +29,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
     <style>
-        #cursor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 3px;
-    height: 50px;
-    background-color: black;
-    animation: blink .75s step-end infinite;
-}
-
-@keyframes blink {
-    from, to { 
-        background-color: transparent 
-    }
-    50% { 
-        background-color: black; 
-    }
-}
-
-
-    </style>
-    <style>
-
-        .tagline{
-            padding-top:20%; 
-            margin-left: 960px;
-        }
-
-    .cate{
-        width:47% ;
-        height: 70%;
-        float: right;
-        padding-top: 15%;"
-    }
-.create{
-    style="margin-left:10px; "
-}
-
-.connect{
-    padding-left: 15%; 
-    margin-top: -50px;
-}
-
-
-
-
-        table {
+    table {
             border: 1px solid black;
       
             width: 40%;
@@ -97,42 +53,404 @@
         tr:nth-child(odd) {
             background-color: #c89eab;
         }
-
-@media (max-width: 991.98px) {
-        
-    .textest{
-        font-size:15px;
-    }
-     .connect{
-    padding-left: 40px; 
-    margin-top: -50px;
+* {
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+.container_i {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
-table{
+
+   .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.responsive-para{
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+    text-align: center;
+}
+
+    }
+.columner {
+  float: left;
+  width: 23.33%;
+ margin-left: 1%;
+  
+}
+
+/* Clearfix (clear floats) */
+.rower::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.timeline {
+    position: relative;
+    padding:4px 0 0 0;
+    margin-top:22px;
+    list-style: none;
+}
+
+.timeline>li:nth-child(even) {
+    position: relative;
+    margin-bottom: 50px;
+    height: 180px;
+    right:-90px;
+}
+
+.timeline>li:nth-child(odd) {
+    position: relative;
+    margin-bottom: 50px;
+    height: 180px;
+    left:-110px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+    min-height: 170px;
+}
+
+.timeline > li .timeline-panel {
+  position: relative;
+  float: left;
+  width: 41%;
+  padding: 0 90px 20px 30px;
+  text-align: right;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    border: 7px solid #F28C28;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0 0 5px #4582ec;
+    width: 100px;
+    height: 100px;
+    margin-left: -100px;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 30px 20px 10px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+  margin-top:22px;
+    margin-bottom: 4px;
+    padding:0;
+    color: #b3b3b3;
+}
+
+.timeline .timeline-heading h4.subheading {
+  margin:0;
+  padding:0;
+    text-transform: none;
+    font-size:18px;
+    color:#333333;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+    color:#808080;
+
+}
+/*Style for even div.line*/
+.timeline>li:nth-child(odd) .line:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 690px;
+    width: 4px;
+    height:310px;
+    background-color: #F28C28;
+    -ms-transform: rotate(-44deg); /* IE 9 */
+    -webkit-transform: rotate(-44deg); /* Safari */
+    transform: rotate(-44deg);
+    box-shadow: 0 0 5px #F28C28;
+}
+/*Style for odd div.line*/
+.timeline>li:nth-child(even) .line:before  {
+    content: "";
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 450px;
+    width: 4px;
+    height:340px;
+    background-color: #F28C28;
+    -ms-transform: rotate(44deg); /* IE 9 */
+    -webkit-transform: rotate(44deg); /* Safari */
+    transform: rotate(44deg);
+    box-shadow: 0 0 5px #F28C28;
+}
+/* Medium Devices, .visible-md-* */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0px;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    left: 0px;
+    margin-left: 0px;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 76%;
+    padding: 0 0 20px 0px;
+    text-align: left;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: right;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+/* Small Devices, Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0px;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    left: 520px;
+    margin-left: 0px;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: left;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 70%;
+    padding: 0 0 20px 0px;
+    text-align: right;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 767px) {
+  .timeline > li:nth-child(even) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    right: 0px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-bottom: 0px;
+    min-height: 0px;
+    left: 0px;
+  }
+  .timeline>li .timeline-image {
+    position: static;
+    width: 150px;
+    height: 150px;
+    margin-bottom:0px;
+  }
+  .timeline>li:nth-child(even) .timeline-image {
+    left: 0;
+    margin-left: 0;
+  }
+  .timeline>li:nth-child(odd) .timeline-image {
+    float:right;
+    left: 0px;
+    margin-left:0;
+  }
+  .timeline > li:nth-child(even) .timeline-panel {
+    width: 100%;
+    padding: 0 0 20px 14px;
+  }
+  .timeline > li:nth-child(odd) .timeline-panel {
+    width: 100%;
+    padding: 0 14px 20px 0px;
+  }
+  .timeline > li .line {
+    display: none;
+  }
+}
+.creator{
+    margin-top: -250px;
+}
+.create{
+   padding-top: 25px;
+    margin-left: 1080px;
+}
+.cate{
+ width:47% ; 
+ height: 80%; 
+ float: right; 
+ padding-top: 0px; 
+}
+.histers{
+  height: 100px;
+  width: 100px; 
+  border-radius: 50%;
+  margin-left: -5px ;
+  margin-top: -5px ;
+}
+.circle{
+    height: 100px;
+    width: 100px; 
+    border-radius: 50%;
+    margin-left: -5px ;
+    margin-top: -5px ;
+}
+@media (max-width: 991.98px) {
+
+    .create{
+   padding-top: 25px;
+    margin-left: 10px;
+}
+.cate{
+ width:93% ; 
+ height: 80%; 
+
+ padding-top: 0px; 
+}
+.histers{
+  height: 160px;
+  width: 160px; 
+  border-radius: 50%;
+  margin-left: -11px ;
+  margin-top: -16px ;
+}
+.circle{
+    height: 160px;
+    width: 160px; 
+    border-radius: 50%;
+    margin-left: -11px ;
+    margin-top: -18px ;
+}
+.tagline{
+            padding-top: 38%; 
+            margin-left: 70px;
+            
+        }
+        .creator{
+    margin-top: 40px;
+}
+        table{
             border: 1px solid black;
       
-            width: 89%;
+            width: 85%;
 
-           
-            margin-left: auto;
+           margin-left: auto;
             margin-right: auto;
-            margin-top: 60px;
+             margin-top: 170px;
           text-align: center;
           color: black;
-      
         }
-       
-        
-    }
-
+        .creators{
+            margin-top: 100px;
+        }
+}
 
 
   @media(min-width: 280px) and (max-width: 320px){
     .titler{
-        font-family: 'Vivaldi', sans-serif; 
+        font-family: cursive; 
         font-size: 60%;
         }
 
+.foot{
+
+            font-size: 1opx;
+                    
+         }
+
+         .creators{
+            margin-top: 150px;
+        }
   }
 
 
@@ -140,43 +458,24 @@ table{
 
 @media (min-width: 320px) and (max-width: 500px){
     .titler{
-        font-family: 'Vivaldi', sans-serif; 
+        font-family: cursive; 
         font-size: 80%;
         }
 
-.texters{
-        font-size:24px;
-    }
 
- .cate{
-        width:85% ;
-        height: 94%;
-       
-        padding-top: 5%;"
-    }
-
- .tagline{
-            padding-top:20%; 
-            margin-left: 60px;
-            font-size: 50px;
-        }
-
-
-        .connect{
-    padding-left: 15%; 
-    margin-top: -50px;
-    font-size: 20px;
-    
-}
 .foot{
 
-            font-size: 20px;
+            font-size: 15px;
                     
          }
 
-.connecting{
-            font-size: 20px;
-       }
+         .histers{
+  height: 150px;
+  width: 150px; 
+  border-radius: 50%;
+  margin-left: -5px ;
+  margin-top: -25px ;
+}
 
 }
 
@@ -189,59 +488,30 @@ table{
 
 @media (min-width: 500px) and (max-width: 768px){
     .titler{
-        font-family: 'Vivaldi', sans-serif; 
+        font-family: cursive; 
         font-size: 80%;
         }
 
 
 .foot{
 
-            font-size: 20px;
+            font-size: 15px;
                     
          }
-
-        .cate{
-        width:85% ;
-        height: 94%;
-       
-        padding-top: 5%;"
-    }
-
- .tagline{
-            padding-top:20%; 
-            margin-left: 260px;
-            font-size: 50px;
-        }
-
-
-
 }
 @media (min-width: 768px) and (max-width: 992px){
 
 .titler{
-        font-family: 'Vivaldi', sans-serif; 
-        font-size: 130%;
+        font-family: cursive; 
+        font-size: 100%;
         }
+
 
 .foot{
 
             font-size: 15px;
                     
          }
-
-        .cate{
-        width:85% ;
-        height: 94%;
-       
-        padding-top: 5%;"
-    }
-
- .tagline{
-            padding-top:20%; 
-            margin-left: 260px;
-            font-size: 50px;
-        }
-
 }
 
 
@@ -250,54 +520,43 @@ table{
 @media (min-width: 991.98px) and (max-width: 1200px){
 
 .titler{
-        font-family: 'Vivaldi', sans-serif; 
-        font-size: 140%;
+        font-family: cursive; 
+        font-size: 100%;
       
         }
+
+       .text{
+        margin-left: 10px;
+        margin-right: 20px;
+       }   
+.create{
+   padding-top: 25px;
+    margin-left: 650px;
+}
+       .tagline{
+            padding-top: 38%; 
+            margin-left: 30px;
+            
+        }
+
+        .creator{
+    margin-top: -190px;
+}
+
+.text {
+    
+    margin-left:-100px;
+}
+.texter{
+
+    margin-left: 90px;
+}
 
 .foot{
 
-            font-size: 20px;
+            font-size: 15px;
                     
          }
-        .cate{
-        width:45% ;
-        height: 94%;
-       
-        padding-top: 5%;"
-    }
-
-
-.connect{
-    padding-left: 5%; 
-    margin-top: -50px;
-    font-size: 33px;
-    
-}
-       .connecting{
-            font-size: 33px;
-       }
-
-       .tagline{
-            padding-top:30%; 
-            margin-left: 580px;
-        }
-
-        
-        table {
-            border: 1px solid black;
-      
-            width: 40%;
-
-            margin-left: 95px; 
-            
-        
-        margin-top: -380px;
-          text-align: center;
-          color: black;
-        }
-
-
 }
 
 
@@ -312,16 +571,7 @@ table{
 
 
 
-
-    </style>
-
-
-  
-  
-  
-  
-    
- 
+</style>
 
 </head>
 
@@ -331,9 +581,10 @@ table{
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
- <!-- Navbar Start -->
+
+     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
+         <a href="index.html" class="navbar-brand d-flex align-items-center">
               <h1 class="display-4 m-0 titler" ><img  class="img-fluid me-3 creative" src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -364,9 +615,8 @@ table{
                         <a href="karunya.html" class="dropdown-item">Karunya Trust</a>
                         <a href="Prayer_grp.html" class="dropdown-item">Prayer Group</a>
                         <a href="JNF.html" class="dropdown-item">JNF</a>
-                         <a href="young_couple.html" class="dropdown-item">Young Couple</a>
+                        <a href="young_couple.html" class="dropdown-item">Young Couple</a>
                     </div>
-                   
                 </div>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SPC</a>
@@ -398,14 +648,15 @@ table{
     <!-- Navbar End -->
 
 
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-4">SHYBs</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">Young Couples</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Youth</li>
+                    <li class="breadcrumb-item active" aria-current="page">Young Couples</li>
                 </ol>
             </nav>
         </div>
@@ -413,70 +664,79 @@ table{
     <!-- Page Header End -->
 
 
-    <!-- Features Start -->
+    <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img style="max-height:75px" src="img/youth_logo.jpg">
-                    <div style="padding-left: 15%; margin-top: -50px;" class="typing-container">
-                        <h1><b>
-                            <span id="sentence" class="sentence connect">Connect & </span>
-                            <span class="connecting" id="feature-text"></span>
-                            <span id="cursor" class="input-cursor"></span>
-                        </b>
-                           </h1> 
-                    </div>
-                    <br>
-                    <br> 
-                    <p class="mb-5" style="text-align: justify;">
-
-
-                        In the late 90's, a journey of youth began at Sacred Heart Church, symbolized by a small seed that represented adolescence. Over the years, this seed has grown into a mighty tree, thanks to the unwavering dedication, coordination, determination, inspiration, and prayers of the youth at Sacred Heart Church.
-
-                        The Sacred Heart Youth Bhayander (SHYBS) has become a beacon of strength and support, not only for our parish or forane but also at the diocese level. The youth of Sacred Heart Church have worked tirelessly to nurture and develop this tree, which now extends its shade and influence across the entire Kalyan diocese.
-
-                    </p>
-                    <p style="text-align: justify;">
-                        Through their active involvement in various activities, events, and initiatives, the youth of Sacred Heart Church have proven themselves to be the epitome of excellence. Their commitment to faith, community, and service has earned them the reputation of being the best youth group in the entire Kalyan diocese.
-
-</p>
-            
-                    
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/shybs_win.jpg" alt="" style="object-fit: cover;">
-                    </div>
-                </div>
-
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">Young Couples</h1>
             </div>
-<br><br><br><br><br>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="text-center mx-auto wow fadeInUp"  data-wow-delay="0.5s" >
+                <p style="text-align: justify;">An organization which was formed with the aim of providing opportunities for newly married couples to actively participate in activities conducted by the Church. This initiative recognizes the importance of nurturing and involving couples in the life of the Church as they embark on their journey of married life. The organization consists of approximately 40 members who share a common desire to deepen their spiritual connection as a couple and contribute to the community.</p>
+                    <br>
+                  
+
+          <p style="text-align: justify;">     By joining this organization, newly married couples have the chance to engage in various activities and events organized by the Church. These activities may include retreats, workshops, marriage enrichment programs, social gatherings, and volunteer opportunities. Through their participation, couples can strengthen their bond, seek guidance and support from experienced couples, and build lasting friendships within the Church community.
+The organization serves as a platform for couples to share their experiences, challenges, and joys with others who are in a similar life stage. It creates a supportive environment where couples can seek advice, learn from one another, and grow together in faith. Additionally, being part of this group allows couples to contribute their talents and skills to the Church, serving as active members in various ministries and outreach initiatives.
+          </p>
+                <br>
+               
+<p style="text-align: justify;">
+                Overall, this organization plays a crucial role in fostering a sense of belonging and involvement for newly married couples within the Church. It provides a space for them to deepen their spiritual connection, build strong relationships, and actively contribute to the growth and well-being of the Church community. 
+The association consists of several members, including Brian Kuttikkat, Mary Kollanoor, Johnson Thomas, Joice Johnson, Justin John Lidiya, Leo Chacko, Sinda Leo, Moshin Tinu, Nitin Kakkar, Vigil Vargese, Tresa Mary Vigil, Asha Cyril, Cyril Jose, Savio, Alphy Johnson, Gifty Jenison, Jebi Antony Gladia Jebi, Vimi Tilson, Tilson Ajay Jose, Briji Ajay, Tini Richu Kanjiravilayil, Richu Saji, Davis and wife, Christo and Aleena Johnson, Joji and Priya, Stebin Rosemol Stebin, Christy Anil, Anil Cherian, Amal Raj, and Siju and Teresa Siju.
+                </p>
+                </div>
+                                
 
 
-<div class="container-xxl py-5">
+
+
+
+
+
+
+
+
+
+    <div class="container-xxl py-5">
         <div class="container">
             <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
-                <h1 class=" text-center  display-6 mb-5">Youth Events</h1>
+                <h1 class=" text-center  display-6 mb-5">Events </h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="row g-4 justify-content-center" style="margin-bottom: 15px;">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
                     <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/ARTHABAN.jpg" alt="">
-                            
+                        <img class="img-fluid" src="img/oppam.jpg" alt="">
+                        
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
                               <br>
-                         <p style="text-align: justify;">Sacred Heart Church Bhayandar celebrated Good Friday service followed by Way of the cross which was attended in great number and was concluded by a special act by SHYBs "ARTHABAN" an amazing light and sound story of The Fourth Wise Man</p>
+                         <p style="text-align: justify;"> Clebrating togetherness, a young couples meet with th blessings of Rev.Fr Binoy With special Holy mass, offertory by young couples , wedding vows later a beautifully setup for get-together with games, interactions, knowledge sharing and concluded by dinner
+</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CqxRBNUvTQX/?img_index=5">ARTHABAN</a>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CfVlovfqyWI/?img_index=1">Oppam</a>
+                            
+                            
                             
                            
                         </div>
@@ -484,120 +744,45 @@ table{
                     </div>
                     
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;"  src="img/yatra.jpg" alt="">
+                        <img class="img-fluid" src="img/JNF_Event2.jpg" alt="">
                             
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
                               <br>
-                         <p style="text-align: justify;">The “PARIHARAYATRA” pilgrimage took place under the leadership of the SHYBS and SHC prayer groups and over 160 parishioners took part in the sacred path from Sacred Heart CHurch, Bhayander to Our Lady of Velankanni in Uttan.</p>
+                         <p style="text-align: justify;">The BD Mastermind Quiz was conducted by the Infusion Nurses Society where as Ms. Pushpa Charles and Ms. Johncy Charles emerged as winners at the regional level, representing their respective parishes and showcasing their exceptional knowledge and skills.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CqxRBNUvTQX/?img_index=1">YATRA</a>
+                            <a class="h4 mx-4 mb-0">BD Mastermind Quiz</a>
                             
                            
                         </div>
                         
                     </div>
                     
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/yuvanam.jpg" alt="">
+                        <img class="img-fluid" src="img/bishh.jpg" alt="">
                             
                     <div class="d-flex align-items-center bg-light">
 
                             <div>
                               <br>
-                         <p style="text-align: justify;">YUVANAM were the days filled with fun, laughter, and drama. Undoubtedly, it was an adventurous experience that facilitated our personal growth. Heartfelt gratitude to everyone who contributed to the success of this event!</p>
+                         <p style="text-align: justify;">Solemn Holy communion was received by 5 children while Bishop of Kalyan Diocese Mar Thomas Elavanal. Further, SHC family  also celebrated Bishops 26th Episcopal Ordination and felicitated silver jubilarian couples and catechism students.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center bg-light" style="height:70px;"> 
                             <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
                                 <img  class="img-fluid" src="img/icon/angel.png" alt="">
                             </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/reel/ChcA3_KjWvB/?igshid=NjFhOGMzYTE3ZQ==">YUVANAM </a>
-                            
-                           
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-
-
-
-
-                <div  style="padding-top: 3%;" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/meet.jpg" alt="">
-                            
-                    <div class="d-flex align-items-center bg-light">
-
-                            <div>
-                              <br>
-                         <p style="text-align: justify;">The youth of the parish organized a vibrant Meet n' Greet event filled with exciting games and activities. The gathering brought together members of the community in a fun-filled atmosphere, fostering bonds and creating lasting memories.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
-                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
-                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/Ce_xsqqP43Y/?img_index=1">MEET & GREET</a>
-                            
-                           
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div style="padding-top: 3%;" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/sell.png" alt="">
-                            
-                    <div class="d-flex align-items-center bg-light">
-
-                            <div>
-                              <br>
-                         <p style="text-align: justify;">The first-place winners of the Sell it Out competition showcased unparalleled expertise, presenting innovative ideas that secured them a well-deserved victory and established them as esteemed leaders in the field.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
-                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
-                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CpZk3tivKtl/?igshid=MzRlODBiNWFlZA==">SELL IT OUT</a>
-                            
-                           
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div style="padding-top: 3%;"class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" style="height:250px; width: 400px;" src="img/synod.jpg" alt="">
-                            
-                    <div class="d-flex align-items-center bg-light">
-
-                            <div>
-                              <br>
-                         <p style="text-align: justify;">The preparation for a Synod of Bishops to be 
-convened in 2023 with the theme “For a Synodal Church: Communion, Participation 
-and Mission”.This 2yr long process  was inaugurated in SHC Bhayandar by Father, Mother and Parish Executives</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center bg-light" style="height:70px;"> 
-                            <div class="service-icon flex-shrink-0 bg-primary" style="height:70px;">
-                                <img  class="img-fluid" src="img/icon/angel.png" alt="">
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="https://www.facebook.com/groups/132843300104355/permalink/4462557997132842/">SYNOD OF BISHOPS</a>
+                            <a class="h4 mx-4 mb-0" href="https://www.instagram.com/p/CokiABJPWlv/?igshid=MDJmNzVkMjY=">Holy Communion</a>
                             
                            
                         </div>
@@ -608,293 +793,123 @@ and Mission”.This 2yr long process  was inaugurated in SHC Bhayandar by Father
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                </div>
-                
-                
-            </div>
-        </div>
-    </div>
-    <!-- Events End -->
-
-
-<div class="g-5">
-                 <h1  style="text-align: center;" class="display-6 mb-5"> Our Venture</h1>
-             
-
-<link rel="stylesheet" href="css/style_timeline.css">
-   
-<script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
-
-
-<div class="timeline">
-
-    <!--first-->
-    <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-        <div class="timeline__event__icon ">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2006-2007
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Formation Of the Name SHYBS
-            </div>
-            <div class="timeline__event__description">
-                <p>Since its establishment in 2006, SHYBS  has achieved numerous accolades, including 1st Prize in Talentia (Diocese), 1st Prize in Dance and Comedy Skit (Borivali zone), 2nd Prize in Crib, Fancy Dress & Street Play Competition - Borivali Zone, and 2nd Prize in Faith Expo.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--second-->
-
-    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2007-2008
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Remarkable milestones
-            </div>
-            <div class="timeline__event__description">
-                <p>SHYBS achieved remarkable milestones, being awarded as the Best Youth of Kalyan diocese, securing 1st prize in the comedy and dance competition in the Borivali Zone, winning 2nd prize in the Zonal Crib Competition, and unveiling its first-ever logo </p>
-            </div>
-        </div>
-    </div>
-
-    <!--third-->
-
-    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2008-2009
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Triumph
-
-            </div>
-            <div class="timeline__event__description">
-                <p>SHYBS  achieved remarkable accomplishments, being awarded as the Best Youth of Kalyan Diocese and securing first prizes in various categories. They excelled in Borivali Zone sports, winning first place. Additionally, they clinched the first prize in cricket (boys), badminton (girls), tug of war, and the Mira-Bhayandar Youth competition.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!--forth-->
-
-    <div class="timeline__event animated fadeInUp timeline__event--type1">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2010-2011
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Active Engagements
-            </div>
-            <div class="timeline__event__description">
-                <p>
-SHYBS actively engages in various activities, including blood donation drives, updating their logo, and organizing Yuvanam events.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--first-->
-    <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-        <div class="timeline__event__icon ">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2012-2013
-        </div>
-        <div class="timeline__event__content ">
-            <div class="timeline__event__title">
-                Participations
-            </div>
-            <div class="timeline__event__description">
-                <p>
-SHYBS organizes the KEY Marathon and actively participates in blood donation drives. </p>
-            </div>
-        </div>
-    </div>
-
-    <!--second-->
-
-    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2014-2015
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Exciting Events
-            </div>
-            <div class="timeline__event__description">
-                <p>SHYBS organizes exciting events such as Cyclothon and Yuvanam, bringing together youth and promoting physical fitness and vibrant community engagement.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--third-->
-
-    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-          2016-2017
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Various Happenings
-            </div>
-            <div class="timeline__event__description">
-                <p>SHYBS undertook diverse initiatives, such as organizing one-time meal events, securing 1st place in a biblical skit competition, achieving 3rd place in break-through , excelling in diocesan sports with 1st place in relay and 3rd place in long jump, 200m, and 400m events. They also visited an orphanage, participated in Yuvanam activities, and performed a street play to raise social awareness about water conservation.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!--forth-->
-
-    <div class="timeline__event animated fadeInUp timeline__event--type1">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2018-2019
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Numerous impactful initiatives
-            </div>
-            <div class="timeline__event__description">
-                <p>SHYBS has been involved in numerous impactful initiatives, including organizing one-time meals, conducting fund-raising events for Kerala flood relief, leading newspaper drives, organizing Cycloton events, hosting seminars, participating in wall painting projects, organizing Yuvanam events, providing 25-day food items for orphanages, and achieving the 3rd prize in Break Thru competitions. </p>
-            </div>
-        </div>
-    </div>
-
-    <!--first-->
-    <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-        <div class="timeline__event__icon ">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2020-2021
-        </div>
-        <div class="timeline__event__content ">
-            <div class="timeline__event__title">
-                Rewards
-            </div>
-            <div class="timeline__event__description">
-                <p>The SHYBS was awarded the 2nd prize in Movie making, secured the 3rd prize in Break thru, and was recognized for their excellence in creating memes, earning them the title of "Social media star."</p>
-            </div>
-        </div>
-    </div>
-
-    <!--second-->
-
-    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-        </div>
-        <div class="timeline__event__date">
-            2021-2022
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Lockdown Events
-            </div>
-            <div class="timeline__event__description">
-                <p>Diverse virtual events such as "Break the pain," Easter card making, "lockdown Chirikudukka," and Quarantine cooking was hosted. They also showcased creative talents with movie-making awards and the best Music recognition, fostering community engagement through online competitions, meets, and events like "Shybs Radio," "Meet and Greet," and a Chain Rosary.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--third-->
-
-    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-        <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-
-        </div>
-        <div class="timeline__event__date">
-            2022-2023
-        </div>
-        <div class="timeline__event__content">
-            <div class="timeline__event__title">
-                Vibrancy
-            </div>
-            <div class="timeline__event__description">
-                <p> Active participation in a range of engaging events, from Short Story competitions to Parihara yatra, Yuvanam art showcase, and lively Onam celebrations was seen. They demonstrated their creativity during the Christmas season with 25-day Christmas videos, diverse tasks, and a Youth Carol event, achieving notable success in the Break Thru and Key play competitions, along with securing the prestigious 1st Prize in "Sell it out." Additionally, they brought joy and festivity to the community through Christmas Stall and a Christmas Rally.  </p>
-            </div>
-
-        </div>
-    </div>
-
-    
-   
-    
-    
-
-  
-
-
+ -->
+               
 </div>
 
 
-             </div>
 
 
 
-<br><br><br><br><br>
-           
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" mx-auto wow fadeInUp" data-wow-delay="0.1s" >
+                <h1 class=" text-center  display-6 mb-5">History </h1>
+            </div>
+            
+
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      
+      
+      <ul class="timeline">
+        <li>
+          <div class="timeline-image">
+            <img class="img-circle img-responsive circle" src="img/icon/hist.png"  alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>March 2022</h4>
+             
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted texter">
+                Rev Fr. Binoy introduced a new group named young couples for the couples who have been married at most 10 years
+
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image creators">
+            <img class="img-circle img-responsive histers" src="img/icon/hist.png" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>June 2022</h4>
+              
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted text">
+                All the members of young couples gathered for their first ever event named 'Oppam' in which all the members met each other and had a great experience
+              </p>
+            </div>
+          </div>
+          
+        </li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</div>
+                    </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
 <div class="g-5" >
-                 <h1  style="text-align: center;" class="display-6 mb-5 text-center mx-auto wow fadeInUp texters" data-wow-delay="0.1s" style="margin-top: 20px;"> Youth Commitee 2023-2025</h1>
+                 <h1  style="text-align: center;" class="display-6 mb-5 text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 20px;"> Young Couples </h1>
+               
+
+<br>
+
+<div style="margin-left:30px;">
 
 
-<div class="create">
-
-
-<img class="img-fluid me-3 cate" src="img/youth_committee.JPG" alt="" >
+<img class="img-fluid me-3 cate" src="img/oppam.jpg" alt="" >
 
 
     </div>
-     <div class="tagline">
-        <span><h5 class="textest">Youth Committe Members( 2023-2025)</h5></span>
+   <div class="create">
+        <span><h5 class="tagline">Young Couples 2023-2025 </h5></span>
     </div> 
 
-                <table>
+
+                <table class="creator">
         <tr>
             <th>Sr No</th>
             <th>Name</th>
@@ -904,117 +919,38 @@ SHYBS organizes the KEY Marathon and actively participates in blood donation dri
         <tr>
             <td>1.</td>
             <td>Fr. Binoy Kannanaikkal</td>
-            <td>Director</td>
+            <td>Parish Priest</td>
         </tr>
         
         <tr>
             <td>2.</td>
-            <td>Bro. Siljo George</td>
-            <td>Asst. Director</td>
+            <td>Mr. Vigil Varghese </td>
+            <td>Incharge</td>
         </tr>
         <tr>
             <td>3.</td>
-            <td>Sr.Vinaya Maria </td>
-            <td>Spiritual Animator</td>
+            <td>Mr. Nitin Kakkar</td>
+            <td>Incharge</td>
         </tr>
 
-       
-
-        <tr>
-            <td>4.</td>
-            <td>Mr.Roy Philip</td>
-            <td>Animator</td>
-        </tr>
-
-
-        <tr>
-            <td>5.</td>
-
-            <td>Mr. Alex Jayi</td>
-            <td>President</td>
-        </tr>
-
-         <tr>
-            <td>6.</td>
-
-            <td>Ms. Shilpa Mathew </td>
-            <td>Vice- President</td>
-        </tr>
-
-        <tr>
-            <td>7.</td>
-            <td>Mr. Albert Alex</td>
-            <td>Secretary </td>
-        </tr>
-        <tr>
-            <td>8.</td>
-            <td>Ms. Sanvia Sunny</td>
-            <td>Joint Secretary </td>
-        </tr>
-        <tr>
-            <td>9.</td>
-            <td>Mr. Varghese Johnson</td>
-            <td>Treasurer</td>
-        </tr>
-
-        <tr>
-            <td>10.</td>
-            <td>Mr.  Abin Kurian</td>
-            <td> Councilor </td>
-        </tr>
-        <tr>
-            <td>11.</td>
-            <td>Mr. Sheffin Thomas</td>
-            <td>Councilor </td>
-        </tr>
-        <tr>
-            <td>12.</td>
-            <td>Ms. Sharon Jacob</td>
-            <td>Key Army</td>
-        </tr>
-
-        <tr>
-            <td>13.</td>
-            <td>Ms. Jasmine Joseph</td>
-            <td>Key Army</td>
-        </tr>
-        <tr>
-            <td>14.</td>
-            <td>Mr. Joel Joemon</td>
-            <td>PRO</td>
-        </tr>
-
-
-
-        <tr>
-            <td>15.</td>
-            <td>Ms. Sharon Sibi</td>
-            <td>Media Represntative</td>
-        </tr>
-
- 
-        <tr>
-            <td>16.</td>
-            <td>Ms. Sherin siby</td>
-            <td>Ex-Official</td>
-        </tr>
-        <tr>
-            <td>17.</td>
-            <td>Ms.Seena Sabu </td>
-           <td>Ex-Official</td>
-        </tr>
         
    </table>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
             </div>
         </div>
     </div>
-    <!-- Features End -->
+</div>
 
-   
+    <!-- Team End -->
+        
   
-<!-- Footer Start -->
+
+   <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -1077,63 +1013,7 @@ SHYBS organizes the KEY Marathon and actively participates in blood donation dri
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
-<script>
-    
 
-const carouselText = [
-  {text: "Learn"},
-  {text: "Inspire"},
-  {text: "Colloborate"}
-]
-
-$( document ).ready(async function() {
-  carousel(carouselText, "#feature-text")
-});
-
-async function typeSentence(sentence, eleRef, delay = 100) {
-  const letters = sentence.split("");
-  let i = 0;
-  while(i < letters.length) {
-    await waitForMs(delay);
-    $(eleRef).append(letters[i]);
-    i++
-  }
-  return;
-}
-
-async function deleteSentence(eleRef) {
-  const sentence = $(eleRef).html();
-  const letters = sentence.split("");
-  let i = 0;
-  while(letters.length > 0) {
-    await waitForMs(100);
-    letters.pop();
-    $(eleRef).html(letters.join(""));
-  }
-}
-
-async function carousel(carouselList, eleRef) {
-    var i = 0;
-    while(true) {
-      updateFontColor(eleRef, carouselList[i].size)
-      await typeSentence(carouselList[i].text, eleRef);
-      await waitForMs(1500);
-      await deleteSentence(eleRef);
-      await waitForMs(500);
-      i++
-      if(i >= carouselList.length) {i = 0;}
-    }
-}
-
-function updateFontColor(eleRef, size) {
-  $(eleRef).css('size', size);
-}
-
-function waitForMs(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
-
-</script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
